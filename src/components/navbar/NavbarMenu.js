@@ -1,24 +1,25 @@
 import { Box, Button, Hidden } from "@mui/material";
 import * as React from 'react';
-import HamburgerMenu from './HamburgerMenu';
+import HamburgerMenu from '../HamburgerMenu';
+import '../../style/components/NavbarMenu.css'
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['Home', 'Apartments', 'Gallery', 'Contact'];
 
 export default function NavbarMenu() {
-  
-
   return (
     <Box>
       <Hidden smUp>
         <HamburgerMenu/>
       </Hidden>
       <Hidden smDown>
-        <Box sx={{ flexGrow: 1, display: 'flex'}} color='secondary'>
+        <Box className='Navbar-menu-wrapper' color='secondary'>
           {pages.map((page) => (
             <Button
               key={page}
+              className="Navbar-menu-item"
               onClick={() => {}}
-              sx={{ my: 2, color: 'primary', display: 'block' }}
+              variant="text"
+              sx={{ my: 2 }}
             >
               {page}
             </Button>

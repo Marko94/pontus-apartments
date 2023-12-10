@@ -3,10 +3,10 @@ import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
-import PhoneInfoPanel from './PhoneInfoPanel';
+import PhoneInfoPanel from '../PhoneInfoPanel';
 import { Grid, Hidden } from '@mui/material';
 import NavbarMenu from './NavbarMenu';
-import '../style/components/Navbar.css'
+import '../../style/components/Navbar.css'
 
 export default function Navbar() {
   return (
@@ -19,7 +19,7 @@ export default function Navbar() {
             </Hidden>
           </Grid>
           <Grid item xs={4} display="flex" alignItems="center">
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
               Pontus Luxury Apartments
             </Typography>
           </Grid>
