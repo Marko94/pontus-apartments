@@ -1,0 +1,36 @@
+.Home-page-container {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14pt;
+  color: white;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Cover-image {
+    opacity: 0;
+    animation: Cover-appear 2s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes Cover-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.Cover-image {
+  width: 100vw;
+  height: auto;
+  pointer-events: none;
+}
+
+.App-link {
+  color: #61dafb;
+}
