@@ -11,7 +11,8 @@
 @media (prefers-reduced-motion: no-preference) {
   .Cover-image {
     opacity: 0;
-    animation: Cover-appear 2s ease-out forwards;
+    animation: Cover-appear 1.5s ease-out forwards;
+    max-height: 600px;
     animation-delay: 0.5s;
   }
 }
@@ -23,6 +24,12 @@
   to {
     opacity: 1;
   }
+}
+
+.Home-content {
+  opacity: 0;
+  animation: Cover-appear 1.5s ease-out forwards;
+  animation-delay: 1s;
 }
 
 .Cover-image {

@@ -5,7 +5,7 @@ import * as React from 'react';
 export default function SectionWrapper(props) {
 
   return (
-    <Container sx={{padding: 0}}>
+    <Container maxWidth='xl' sx={{px: 0, py: 6}}>
       {props.children}
     </Container>
   );
