@@ -27,6 +27,7 @@
 }
 
 .Home-content {
+  padding: 48px 0;
   opacity: 0;
   animation: Cover-appear 1.5s ease-out forwards;
   animation-delay: 1s;

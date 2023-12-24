@@ -24,7 +24,6 @@ export default function Navbar() {
             </Typography>
           </Grid>
           <Grid item xs={4} display="flex" alignItems="center" justifyContent="end">
-            <Button variant='contained'>Book Online</Button>
           </Grid>
         </Grid>
       </Toolbar>

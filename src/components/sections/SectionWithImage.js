@@ -7,7 +7,7 @@ export default function SectionWithImage({src, alt, title, subtitle, details, di
 
   return (
     <SectionWrapper>
-      <Grid container direction={direction}>
+      <Grid container direction={direction} className='Section-with-image-container'>
         <Grid item xs={12} md={6} display='flex' alignItems='center'>
           <img src={src} alt={alt} display='block' height='auto' width='100%'/>
         </Grid>
