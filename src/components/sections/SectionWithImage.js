@@ -1,6 +1,7 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import * as React from 'react';
-import '../../style/components/SectionWithImage.css';
+import '../../style/components/sections/SectionWithImage.css';
+import TextWithTitle from '../TextWithTitle';
 import SectionWrapper from './SectionWrapper';
 
 export default function SectionWithImage({src, alt, title, subtitle, details, direction}) {
@@ -12,11 +13,18 @@ export default function SectionWithImage({src, alt, title, subtitle, details, di
           <img src={src} alt={alt} display='block' height='auto' width='100%'/>
         </Grid>
         <Grid item xs={12} md={6} className='Text-wrapper'>
-          <Box className='Text-container'>
+          <TextWithTitle
+            title={title}
+            titleVariant='h5'
+            subtitle={subtitle}
+            subtitleVariant='h6'
+            details={details}
+          />
+          {/* <Box className='Text-container'>
             <Typography variant='h5' color='primary'>{title}</Typography>
             <Typography variant='h6' color='primary'>{subtitle}</Typography>
             <Typography variant='p1' color='black' align='justify' pt={1}>{details}</Typography>
-          </Box>
+          </Box> */}
         </Grid>
       </Grid>
     </SectionWrapper>

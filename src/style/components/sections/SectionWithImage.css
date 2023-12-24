@@ -1,7 +1,11 @@
 .Section-with-image-container {
   padding: 0;
+  display: contents;
+
   .Text-wrapper {
     padding: 48px;
+    display:flex;
+    align-items: center;
 
     .Text-container {
       display: flex;
