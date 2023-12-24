@@ -13,17 +13,17 @@ export default function Navbar() {
     <AppBar position="sticky" color="inherit" sx={{minHeight:95, justifyContent: "center", zIndex: (theme) => theme.zIndex.drawer + 1}}>
       <Toolbar>
         <Grid container spacing={2}>
-          <Grid item xs={4}>
-            <Hidden smDown>
+          <Grid item xs={2}>
+            <Hidden lgDown>
               <PhoneInfoPanel/>
             </Hidden>
           </Grid>
-          <Grid item xs={4} display="flex" alignItems="center">
+          <Grid item xs={8} display="flex" alignItems="center">
             <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
               Pontus Luxury Apartments
             </Typography>
           </Grid>
-          <Grid item xs={4} display="flex" alignItems="center" justifyContent="end">
+          <Grid item xs={2} display="flex" alignItems="center" justifyContent="end">
           </Grid>
         </Grid>
       </Toolbar>
