@@ -16,8 +16,8 @@ export default function NavbarMenu() {
           {pages.map((page) => (
             <Button
               key={page}
+              href={page === pages[0] ? "/" : page.toLocaleLowerCase()}
               className="Navbar-menu-item"
-              onClick={() => {}}
               variant="text"
               sx={{ my: 2 }}
             >
