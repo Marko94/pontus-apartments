@@ -10,7 +10,7 @@ import '../../style/components/Navbar.css'
 
 export default function Navbar() {
   return (
-    <AppBar position="sticky" color="inherit" sx={{minHeight:95, justifyContent: "center", zIndex: (theme) => theme.zIndex.drawer + 1}}>
+    <AppBar position="sticky" color="inherit" sx={{minHeight:95, justifyContent: "center", zIndex: 10}}>
       <Toolbar>
         <Grid container spacing={2}>
           <Grid item xs={2}>
