@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/pontus-apartments/static/css/main.60a5bb52.css",
-    "main.js": "/pontus-apartments/static/js/main.dd858574.js",
-    "static/media/Close up from see.jpg": "/pontus-apartments/static/media/Close up from see.82e0fb3769778b675f8f.jpg",
-    "static/media/View from sea.jpg": "/pontus-apartments/static/media/View from sea.af415a74443f6399dee3.jpg",
-    "index.html": "/pontus-apartments/index.html",
-    "main.60a5bb52.css.map": "/pontus-apartments/static/css/main.60a5bb52.css.map",
-    "main.dd858574.js.map": "/pontus-apartments/static/js/main.dd858574.js.map"
+    "main.css": "/static/css/main.60a5bb52.css",
+    "main.js": "/static/js/main.ee8ef980.js",
+    "static/media/Close up from see.jpg": "/static/media/Close up from see.82e0fb3769778b675f8f.jpg",
+    "static/media/View from sea.jpg": "/static/media/View from sea.af415a74443f6399dee3.jpg",
+    "index.html": "/index.html",
+    "main.60a5bb52.css.map": "/static/css/main.60a5bb52.css.map",
+    "main.ee8ef980.js.map": "/static/js/main.ee8ef980.js.map"
   },
   "entrypoints": [
     "static/css/main.60a5bb52.css",
-    "static/js/main.dd858574.js"
+    "static/js/main.ee8ef980.js"
   ]
 }
