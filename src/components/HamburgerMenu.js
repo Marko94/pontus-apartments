@@ -1,13 +1,20 @@
-import * as React from 'react';
-import { IconButton, MenuItem, SwipeableDrawer, Typography } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
+import { IconButton, MenuItem, SwipeableDrawer } from "@mui/material";
+import * as React from 'react';
+import { Link } from 'react-router-dom';
+import pages from '../constants/pages';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const linkStyle = {
+  fontWeight: 650,
+  textDecoration: "none",
+  flex: 1,
+  color: 'black'
+};
 
 export default function HamburgerMenu() {
   const [isDrawerOpened, setIsDrawerOpened] = React.useState(false);
 
-  const changeDrawerOpened = (isOpened) => (event) => {
+  const changeDrawerOpened = (isOpened) => (_) => {
     setIsDrawerOpened(isOpened);
   };
 
@@ -23,7 +30,6 @@ export default function HamburgerMenu() {
         <MenuIcon />
       </IconButton>
       <SwipeableDrawer
-        // anchorEl={anchorElNav}
         open={isDrawerOpened}
         onClose={changeDrawerOpened(false)}
         onOpen={changeDrawerOpened(true)}
@@ -31,8 +37,8 @@ export default function HamburgerMenu() {
         disableSwipeToOpen
       >
         {pages.map((page) => (
-          <MenuItem key={page} onClick={changeDrawerOpened(false)}>
-            <Typography textAlign="center">{page}</Typography>
+          <MenuItem key={page}>
+            <Link to={page === pages[0] ? "/" : page.toLocaleLowerCase()} onClick={changeDrawerOpened(false)} style={linkStyle}>{page}</Link>
           </MenuItem>
         ))}
       </SwipeableDrawer>

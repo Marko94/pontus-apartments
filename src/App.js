@@ -11,9 +11,9 @@ import './style/App.css'
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Box className="content-wrapper">
-        <BrowserRouter>
+      <BrowserRouter>
+        <Navbar/>
+        <Box className="content-wrapper">
           <Routes>
             <Route index path="/" element={<HomePage/>} />
             <Route path="apartments" element={<ApartmentsPage/>} />
@@ -21,8 +21,8 @@ function App() {
             <Route path="contact" element={<ContactPage/>} />
             <Route path="*" element={<div/>}/>
           </Routes>
-        </BrowserRouter>
-      </Box>
+        </Box>
+      </BrowserRouter>
     </div>
   );
 }

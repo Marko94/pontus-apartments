@@ -2,8 +2,7 @@ import { Box, Button, Hidden } from "@mui/material";
 import * as React from 'react';
 import HamburgerMenu from '../HamburgerMenu';
 import '../../style/components/NavbarMenu.css'
-
-const pages = ['Home', 'Apartments', 'Gallery', 'Contact'];
+import pages from "../../constants/pages";
 
 export default function NavbarMenu() {
   return (
