@@ -1,7 +1,7 @@
 import viewFromSea from "../assets/View from sea.jpg"
 import closeUpFromSea from "../assets/Close up from see.jpg"
 
-export const photos = [
+export const photosGalery = [
   {
     src: viewFromSea,
     width: 5,

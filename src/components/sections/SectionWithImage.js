@@ -20,11 +20,6 @@ export default function SectionWithImage({src, alt, title, subtitle, details, di
             subtitleVariant='h6'
             details={details}
           />
-          {/* <Box className='Text-container'>
-            <Typography variant='h5' color='primary'>{title}</Typography>
-            <Typography variant='h6' color='primary'>{subtitle}</Typography>
-            <Typography variant='p1' color='black' align='justify' pt={1}>{details}</Typography>
-          </Box> */}
         </Grid>
       </Grid>
     </SectionWrapper>

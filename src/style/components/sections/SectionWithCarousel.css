@@ -1,0 +1,27 @@
+.Section-with-carousel-container {
+  padding: 0;
+  display: contents;
+
+  .Carousel-container {
+    border-radius: 8px;
+    background-color: #aaaaaa20;
+    overflow: hidden;
+
+    button {
+      background-color: #00000070
+    }
+  }
+
+  .Text-wrapper {
+    display:flex;
+    align-items: center;
+
+    .Text-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+}

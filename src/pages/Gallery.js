@@ -3,7 +3,7 @@ import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import '../style/pages/Gallery.css';
-import { photos } from "../constants/photos";
+import { photosGalery } from "../constants/photos";
 
 
 export default function GalleryPage() {
@@ -24,18 +24,19 @@ export default function GalleryPage() {
     <Box className='Gallery-page-container' flex alignItems='center' justifyContent='center'>
       <Box maxWidth='xl'>
         <Typography variant='h3' pb={2}>Photo Gallery</Typography>
-        <Gallery photos={photos} onClick={openLightbox} />
+        <Gallery photos={photosGalery} onClick={openLightbox} />
         <ModalGateway>
           {viewerIsOpen ? (
             <Modal onClose={closeLightbox} allowFullscreen={false} className="Gallery-page-modal">
               <Carousel
                 currentIndex={currentImage}
-                views={photos.map(photo => ({
+                views={photosGalery.map(photo => ({
                   ...photo,
                   srcset: photo.srcSet,
                   caption: photo.title,
                 }))}
                 hideControlsWhenIdle={false}
+                styles={{navigationPrev: {'background-color': '#00000007'}}}
               />
             </Modal>
           ) : null}
