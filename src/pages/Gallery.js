@@ -36,7 +36,6 @@ export default function GalleryPage() {
                   caption: photo.title,
                 }))}
                 hideControlsWhenIdle={false}
-                styles={{navigationPrev: {'background-color': '#00000007'}}}
               />
             </Modal>
           ) : null}
