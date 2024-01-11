@@ -1,3 +1,10 @@
 .Nav-bar {
-    
+  min-height:95;
+  justify-content: center;
+  z-index: 10;
+}
+
+.Nav-bar-grid-container {
+  border-bottom: 2px solid rgba(255,255,255,.3);
+  padding-bottom: 8px;
 }

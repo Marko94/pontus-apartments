@@ -1,30 +1,22 @@
-import { Box, Button, Hidden } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import * as React from 'react';
-import HamburgerMenu from '../HamburgerMenu';
-import '../../style/components/NavbarMenu.css'
 import pages from "../../constants/pages";
+import '../../style/components/NavbarMenu.css';
 
 export default function NavbarMenu() {
   return (
-    <Box>
-      <Hidden smUp>
-        <HamburgerMenu/>
-      </Hidden>
-      <Hidden smDown>
-        <Box className='Navbar-menu-wrapper' color='secondary'>
-          {pages.map((page) => (
-            <Button
-              key={page}
-              href={page === pages[0] ? "/" : page.toLocaleLowerCase()}
-              className="Navbar-menu-item"
-              variant="text"
-              sx={{ my: 2 }}
-            >
-              {page}
-            </Button>
-          ))}
-        </Box>
-      </Hidden>
+    <Box className='Navbar-menu-wrapper'>
+      {pages.map((page) => (
+        <Button
+          key={page}
+          href={page === pages[0] ? "/" : page.toLocaleLowerCase()}
+          className="Navbar-menu-item"
+          variant="text"
+          sx={{ my: 2 }}
+        >
+          {page}
+        </Button>
+      ))}
     </Box>
   );
 };

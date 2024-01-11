@@ -34,6 +34,8 @@ export default function HamburgerMenu() {
         onClose={changeDrawerOpened(false)}
         onOpen={changeDrawerOpened(true)}
         variant='temporary'
+        anchor='right'
+        PaperProps={{sx: {width: {xs: '75%', md: 480}}}}
         disableSwipeToOpen
       >
         {pages.map((page) => (

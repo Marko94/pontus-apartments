@@ -10,10 +10,10 @@ export default function InfoPanel() {
       <Typography variant="p1" component="div" display="flex" alignItems="center">
         <PhoneEnabledIcon/>
         <Box display="flex" flexDirection="column" sx={{ ml:1 }}>
-          <Link href="tel:+38269466754" flex>
+          <Link href="tel:+38269466754" flex color="inherit">
             +382 69 466 754
           </Link>
-          <Link href="tel:+38269033039" flex>
+          <Link href="tel:+38269033039" flex color="inherit">
             +382 69 033 039
           </Link>
         </Box>
