@@ -4,9 +4,18 @@ import HousePhoto from '../assets/Close up from see.jpg';
 import CoverPhoto from '../assets/View from sea.jpg';
 import SectionWithImage from '../components/sections/SectionWithImage';
 import SectionWithText from '../components/sections/SectionWithText';
+import reveal from '../helpers/onSectionReveal';
 import '../style/pages/Home.css';
 
 export default function HomePage() {
+  //forces the section load animation to trigger on page load
+  React.useLayoutEffect (() => {
+    reveal();
+  }, []);
+
+  window.addEventListener("pageshow", reveal);
+  window.addEventListener("scroll", reveal);
+
   return (
     <Box className='Home-page-container' flex>
       <img src={CoverPhoto} className="Cover-image" alt="Cover" />
@@ -45,7 +54,14 @@ export default function HomePage() {
               <Button variant="outlined" href='https://maps.app.goo.gl/HkwsJ14o2N1ksNi5A'>Open location in Maps</Button>
             </Box>
           </Hidden>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1472.5595294984394!2d18.701716232092714!3d42.42520059074555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c318493bdf473%3A0x1e92cacdc47948aa!2sPontus%20Luxury%20Apartments!5e0!3m2!1sen!2srs!4v1704753121543!5m2!1sen!2srs" width="80%" height="100%" style={{border:0, }} allowfullscreen={true} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1472.5595294984394!2d18.701716232092714!3d42.42520059074555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c318493bdf473%3A0x1e92cacdc47948aa!2sPontus%20Luxury%20Apartments!5e0!3m2!1sen!2srs!4v1704753121543!5m2!1sen!2srs"
+            width="80%"
+            height="100%"
+            className="Section"
+            style={{border:0, }}
+            loading="lazy"
+          ></iframe>
         </Grid>
       </Grid> 
       <a

@@ -6,18 +6,33 @@
   align-items: center;
   font-size: 14pt;
   color: white;
+
+  /* .MuiGrid-item {
+    animation: Section-appear 0.75s ease-out forwards;
+  } */
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .Cover-image {
     opacity: 0;
-    animation: Cover-appear 1.5s ease-out forwards;
-    max-height: 600px;
+    animation: Cover-appear 0.75s ease-out forwards;
+    aspect-ratio: 24/9;
     animation-delay: 0.5s;
+    clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    z-index: 2;
   }
 }
 
 @keyframes Cover-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes Section-appear {
   from {
     opacity: 0;
   }
@@ -41,6 +56,17 @@
     height: auto;
     aspect-ratio: 16 / 9;
   }
+
+  .Section {
+    transform: translateY(75px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+
+  .Section.Active {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .Cover-image {
@@ -48,6 +74,15 @@
   height: auto;
   pointer-events: none;
 }
+
+/* .Cover-image-decoration {
+  pointer-events: none;
+  background-color: brown;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1980/162;
+  clip-path: polygon(50% 90%, 100% 0, 100% 10%, 50% 100%, 0 10%, 0 0);
+} */
 
 .App-link {
   color: #61dafb;
