@@ -1,25 +1,29 @@
 import { Grid } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import React from "react";
-import Carousel from 'react-images';
+import ReactImageGallery from 'react-image-gallery';
+import "react-image-gallery/styles/css/image-gallery.css";
 import '../../style/components/sections/SectionWithCarousel.css';
 import TextWithTitle from '../TextWithTitle';
 import SectionWrapper from './SectionWrapper';
 
 export default function SectionWithCarousel({photos, alt, title, subtitle, details, direction, spacing}) {
+  const theme = useTheme();
+  const smUp = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
     <SectionWrapper>
       <Grid container direction={{xs: 'column-reverse', md: direction}} className='Section-with-carousel-container' sx={{py: spacing}}>
         <Grid item xs={12} md={6} display='flex' alignItems='center' className='Carousel-container'>
-          <Carousel
-            views={photos.map(photo => ({
-              ...photo,
-              srcset: photo.srcSet,
-              caption: photo.title,
-            }))}
-            hideControlsWhenIdle={false}
-            alt={alt}
-            components={{Footer: undefined}}
+          <ReactImageGallery
+            items={photos}
+            lazyLoad={true}
+            infinite={true}
+            showThumbnails={false}
+            showBullets={true}
+            showNav={smUp}
+            showPlayButton={false}
           />
         </Grid>
         <Grid item xs={12} md={6} className='Text-wrapper' p={{xs: 3, md: 6}}>

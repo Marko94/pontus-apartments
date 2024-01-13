@@ -7,8 +7,22 @@
     background-color: #aaaaaa20;
     overflow: hidden;
 
-    button {
-      background-color: #00000070
+    .image-gallery-slide {
+      object-fit: contain;
+      aspect-ratio: 3/2;
+      
+      .image-gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+      height: 60px;
+      width: 60px;
+      background-color: #00000030;
+      border-radius: 10%;
     }
   }
 
