@@ -32,15 +32,6 @@
   }
 }
 
-@keyframes Section-appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .Home-content {
   padding: 36px 0 36px 0;
   opacity: 0;
@@ -55,17 +46,6 @@
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
-  }
-
-  .Section {
-    transform: translateY(75px);
-    opacity: 0;
-    transition: 1s all ease;
-  }
-
-  .Section.Active {
-    transform: translateY(0px);
-    opacity: 1;
   }
 }
 

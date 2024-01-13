@@ -19,6 +19,35 @@ import darkGreen1 from "../assets/apartments/apartment 4/Dark-green 1.jpg"
 import darkGreen2 from "../assets/apartments/apartment 4/Dark-green 2.jpg"
 import darkGreen3 from "../assets/apartments/apartment 4/Dark-green 3.jpg"
 import darkGreen4 from "../assets/apartments/apartment 4/Dark-green 4.jpg"
+import green1 from "../assets/apartments/apartment 5/Green 1.jpg"
+import green2 from "../assets/apartments/apartment 5/Green 2.jpg"
+import green3 from "../assets/apartments/apartment 5/Green 3.jpg"
+import green4 from "../assets/apartments/apartment 5/Green 4.jpg"
+import lightPurple1 from "../assets/apartments/apartment 6/Light-purple 1.jpg"
+import lightPurple2 from "../assets/apartments/apartment 6/Light-purple 2.jpg"
+import lightPurple3 from "../assets/apartments/apartment 6/Light-purple 3.jpg"
+import lightPurple4 from "../assets/apartments/apartment 6/Light-purple 4.jpg"
+import lightPurple5 from "../assets/apartments/apartment 6/Light-purple 5.jpg"
+import orange1 from "../assets/apartments/apartment 7/Orange 1.jpg"
+import orange2 from "../assets/apartments/apartment 7/Orange 2.jpg"
+import orange3 from "../assets/apartments/apartment 7/Orange 3.jpg"
+import orange4 from "../assets/apartments/apartment 7/Orange 4.jpg"
+import purple1 from "../assets/apartments/apartment 8/Purple 1.jpg"
+import purple2 from "../assets/apartments/apartment 8/Purple 2.jpg"
+import purple3 from "../assets/apartments/apartment 8/Purple 3.jpg"
+import purple4 from "../assets/apartments/apartment 8/Purple 4.jpg"
+import red1 from "../assets/apartments/apartment 9/Red 1.jpg"
+import red2 from "../assets/apartments/apartment 9/Red 2.jpg"
+import red3 from "../assets/apartments/apartment 9/Red 3.jpg"
+import red4 from "../assets/apartments/apartment 9/Red 4.jpg"
+import teal1 from "../assets/apartments/apartment 10/Teal 1.jpg"
+import teal2 from "../assets/apartments/apartment 10/Teal 2.jpg"
+import teal3 from "../assets/apartments/apartment 10/Teal 3.jpg"
+import yellow1 from "../assets/apartments/apartment 11/Yellow 1.jpg"
+import yellow2 from "../assets/apartments/apartment 11/Yellow 2.jpg"
+import yellow3 from "../assets/apartments/apartment 11/Yellow 3.jpg"
+import yellow4 from "../assets/apartments/apartment 11/Yellow 4.jpg"
+import yellow5 from "../assets/apartments/apartment 11/Yellow 5.jpg"
 
 export const photosGalery = [
   {
@@ -75,72 +104,180 @@ export const photosGalery = [
 
 export const apartmentOne = [
   {
-    src: blue1
+    original: blue1
   },
   {
-    src: blue2
+    original: blue2
   },
   {
-    src: blue3
+    original: blue3
   },
   {
-    src: blue4
+    original: blue4
   },
   {
-    src: blue5
+    original: blue5
   }
 ];
 
 export const apartmentTwo = [
   {
-    src: brown1
+    original: brown1
   },
   {
-    src: brown2
+    original: brown2
   },
   {
-    src: brown3
+    original: brown3
   },
   {
-    src: brown4
+    original: brown4
   },
   {
-    src: brown5
+    original: brown5
   }
 ];
 
 export const apartmentThree = [
   {
-    src: cream1
+    original: cream1
   },
   {
-    src: cream2
+    original: cream2
   },
   {
-    src: cream3
+    original: cream3
   },
   {
-    src: cream4
+    original: cream4
   },
   {
-    src: cream5
+    original: cream5
   }
 ];
 
 export const apartmentFour = [
   {
-    src: darkGreen1
+    original: darkGreen1
   },
   {
-    src: darkGreen2
+    original: darkGreen2
   },
   {
-    src: darkGreen2
+    original: darkGreen2
   },
   {
-    src: darkGreen3
+    original: darkGreen3
   },
   {
-    src: darkGreen4
+    original: darkGreen4
+  }
+];
+
+export const apartmentFive = [
+  {
+    original: green1
+  },
+  {
+    original: green2
+  },
+  {
+    original: green3
+  },
+  {
+    original: green4
+  }
+];
+
+export const apartmentSix = [
+  {
+    original: lightPurple1
+  },
+  {
+    original: lightPurple2
+  },
+  {
+    original: lightPurple3
+  },
+  {
+    original: lightPurple4
+  },
+  {
+    original: lightPurple5
+  }
+];
+
+export const apartmentSeven = [
+  {
+    original: orange1
+  },
+  {
+    original: orange2
+  },
+  {
+    original: orange3
+  },
+  {
+    original: orange4
+  }
+];
+
+export const apartmentEight = [
+  {
+    original: purple1
+  },
+  {
+    original: purple2
+  },
+  {
+    original: purple3
+  },
+  {
+    original: purple4
+  }
+];
+
+export const apartmentNine = [
+  {
+    original: red1
+  },
+  {
+    original: red2
+  },
+  {
+    original: red3
+  },
+  {
+    original: red4
+  }
+];
+
+export const apartmentTen = [
+  {
+    original: teal1
+  },
+  {
+    original: teal2
+  },
+  {
+    original: teal3
+  }
+];
+
+export const apartmentEleven = [
+  {
+    original: yellow1
+  },
+  {
+    original: yellow2
+  },
+  {
+    original: yellow3
+  },
+  {
+    original: yellow4
+  },
+  {
+    original: yellow5
   }
 ];
