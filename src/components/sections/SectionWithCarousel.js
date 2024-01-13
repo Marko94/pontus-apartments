@@ -5,11 +5,11 @@ import '../../style/components/sections/SectionWithCarousel.css';
 import TextWithTitle from '../TextWithTitle';
 import SectionWrapper from './SectionWrapper';
 
-export default function SectionWithCarousel({photos, alt, title, subtitle, details, direction}) {
+export default function SectionWithCarousel({photos, alt, title, subtitle, details, direction, spacing}) {
 
   return (
     <SectionWrapper>
-      <Grid container direction={{xs: 'column-reverse', md: direction}} className='Section-with-carousel-container'>
+      <Grid container direction={{xs: 'column-reverse', md: direction}} className='Section-with-carousel-container' sx={{py: spacing}}>
         <Grid item xs={12} md={6} display='flex' alignItems='center' className='Carousel-container'>
           <Carousel
             views={photos.map(photo => ({
