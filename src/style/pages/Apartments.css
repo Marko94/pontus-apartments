@@ -1,7 +1,23 @@
 .Apartments-page-container {
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 14pt;
+
+  @media (prefers-reduced-motion: no-preference) {
+    .Cover-image {
+      opacity: 0;
+      animation: Element-appear 0.75s ease-out forwards;
+      aspect-ratio: 24/9;
+      object-fit: cover;
+      animation-delay: 0.5s;
+      z-index: 2;
+    }
+  }
+}
+
+.Apartments-content {
+  opacity: 0;
+  animation: Element-appear 1.5s ease-out forwards;
+  animation-delay: 1s;
 }

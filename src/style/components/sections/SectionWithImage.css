@@ -1,13 +1,16 @@
 .Section-with-image-container {
-  padding: 0;
-  display: contents;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 12px 0 12px 0;
 
   .Text-wrapper {
-    padding: 48px;
     display:flex;
     align-items: center;
 
     .Text-container {
+      padding: 48px;
       display: flex;
       flex-direction: column;
       justify-content: center;

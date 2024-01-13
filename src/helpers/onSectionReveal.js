@@ -7,8 +7,6 @@ function reveal() {
 
     if (elementTop < windowHeight - elementHeight*0.60) {
       sections[i].classList.add("Active");
-    } else {
-      sections[i].classList.remove("Active");
     }
   }
 }
