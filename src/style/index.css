@@ -1,7 +1,7 @@
 :root{
   --primary: #326273;
   --primary-light: #5C9ead;
-  --secondary: #fbcc02;
+  --secondary: #b3965a;
 }
 
 body {
@@ -21,6 +21,21 @@ body {
   .Section.Active {
     transform: translateY(0px);
     opacity: 1;
+  }
+  h3 {
+    color: var(--primary-light) !important;
+  }
+
+  h4 {
+    color: var(--primary-light) !important;
+  }
+
+  h5 {
+    color: var(--primary-light) !important;
+  }
+
+  h6 {
+    color: var(--primary-light) !important;
   }
 }
 
