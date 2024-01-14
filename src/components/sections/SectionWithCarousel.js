@@ -14,7 +14,7 @@ export default function SectionWithCarousel({photos, alt, title, subtitle, detai
 
   return (
     <SectionWrapper>
-      <Box className='Section-with-carousel-container' style={{backgroundColor: backgroundColor}}>
+      <Box className='Section-with-carousel-container Section' style={{backgroundColor: backgroundColor}}>
         <Grid container direction={{xs: 'column-reverse', md: direction}} maxWidth={maxWidth} className='Section-with-carousel-content' sx={{py: spacing}}>
           <Grid item xs={12} md={6} display='flex' alignItems='center' className='Carousel-container'>
             <ReactImageGallery

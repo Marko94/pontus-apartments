@@ -8,7 +8,7 @@ export default function SectionWithText({title, subtitle, details, backgroundCol
 
   return (
     <SectionWrapper>
-      <Box className='Section-with-text-container' style={{backgroundColor: backgroundColor}}>
+      <Box className='Section-with-text-container Section' style={{backgroundColor: backgroundColor}}>
         <Box className='Section-with-text-content' maxWidth={maxWidth}>
           <TextWithTitle
             title={title}

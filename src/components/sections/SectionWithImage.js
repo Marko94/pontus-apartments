@@ -8,7 +8,7 @@ export default function SectionWithImage({ src, alt, title, subtitle, details, d
 
   return (
     <SectionWrapper>
-      <Box className='Section-with-image-container' style={{ backgroundColor: backgroundColor }}>
+      <Box className='Section-with-image-container Section' style={{ backgroundColor: backgroundColor }}>
         <Grid container maxWidth={maxWidth} direction={direction} sx={{py: spacing}}>
           <Grid item xs={12} md={6} display='flex' alignItems='center'>
             <img src={src} alt={alt} display='block' height='auto' width='100%' />
