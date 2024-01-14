@@ -26,6 +26,13 @@
   animation: Element-appear 1.5s ease-out forwards;
   animation-delay: 1s;
 
+  .Gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
   .Map-container {
     display: flex;
     flex-direction: column;
@@ -42,6 +49,8 @@
 .Cover-image {
   width: 100%;
   height: auto;
+  min-height: 200px;
+  object-fit: cover;
   pointer-events: none;
 }
 

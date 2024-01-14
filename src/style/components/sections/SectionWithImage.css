@@ -5,8 +5,15 @@
   height: 100%;
   padding: 12px 0 12px 0;
 
+  .Image-container {
+    background-color: #aaaaaa20;
+    overflow: hidden;
+  }
+
   .Text-wrapper {
     display:flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     .Text-container {

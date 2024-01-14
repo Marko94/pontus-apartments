@@ -4,15 +4,17 @@ import TextWithTitle from '../TextWithTitle';
 import '../../style/components/sections/SectionWithText.css';
 import { Box } from '@mui/material';
 
-export default function SectionWithText({title, subtitle, details, backgroundColor, maxWidth}) {
+export default function SectionWithText({title, titleVariant, subtitle, decoration, details, backgroundColor, maxWidth, py}) {
 
   return (
-    <SectionWrapper>
-      <Box className='Section-with-text-container Section' style={{backgroundColor: backgroundColor}}>
+    <SectionWrapper py={py} backgroundColor={backgroundColor}>
+      <Box className='Section-with-text-container Section'>
         <Box className='Section-with-text-content' maxWidth={maxWidth}>
           <TextWithTitle
             title={title}
+            titleVariant={titleVariant}
             subtitle={subtitle}
+            decoration={decoration}
             details={details} 
             spacing={2}
             max-width='100vw'

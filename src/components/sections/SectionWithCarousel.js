@@ -8,7 +8,7 @@ import '../../style/components/sections/SectionWithCarousel.css';
 import TextWithTitle from '../TextWithTitle';
 import SectionWrapper from './SectionWrapper';
 
-export default function SectionWithCarousel({photos, alt, title, subtitle, details, direction, spacing, backgroundColor, maxWidth}) {
+export default function SectionWithCarousel({photos, alt, title, subtitle, details, decoration, direction, spacing, backgroundColor, maxWidth}) {
   const theme = useTheme();
   const smUp = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -34,6 +34,7 @@ export default function SectionWithCarousel({photos, alt, title, subtitle, detai
               subtitle={subtitle}
               subtitleVariant='h6'
               details={details}
+              decoration={decoration}
               spacing={1}
             />
           </Grid>

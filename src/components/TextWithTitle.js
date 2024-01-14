@@ -6,6 +6,7 @@ export default function TextWithTitle({
   titleVariant='h3',
   subtitle,
   subtitleVariant='h4',
+  decoration,
   details,
   detailsVariant='p1',
   spacing=0,
@@ -19,9 +20,12 @@ export default function TextWithTitle({
       </Grid>
       <Grid item display='flex' alignItems='center'>
         <Typography variant={subtitleVariant} color='primary'>{subtitle}</Typography>
+        {decoration && 
+          <img src={decoration}/>
+        }
       </Grid>
       <Grid item display='flex' alignItems='center'>
-        <Typography variant={detailsVariant} color='black' align='justify' pt={1}>{details}</Typography>
+        <Typography variant={detailsVariant} color='black' align='justify' pt={1} sx={{ whiteSpace: "pre-wrap" }}>{details}</Typography>
       </Grid>
     </Grid>
   );
