@@ -1,18 +1,16 @@
-import { Box, Button, Grid, Hidden } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import * as React from 'react';
 import HousePhoto from '../assets/Close up from see.jpg';
 import CoverPhoto from '../assets/View from sea.jpg';
 import ApartmentPhoto from '../assets/apartments/apartment 2/Brown 1.jpg';
-import Squigle from '../assets/decorations/Squigle.png'
-import Cutout from '../assets/decorations/House cutout.png'
+import Cutout from '../assets/decorations/House cutout.png';
+import Squigle from '../assets/decorations/Squigle.png';
+import { apartmentsDetails, apartmentsSubtitle, apartmentsTitle, introDetails, introTitle } from '../assets/languages/english/Home page conent';
+import Page from '../components/Page';
+import SectionWithGallery from '../components/sections/SectionWithGallery';
 import SectionWithImage from '../components/sections/SectionWithImage';
 import SectionWithText from '../components/sections/SectionWithText';
 import '../style/pages/Home.css';
-import Page from '../components/Page';
-import { introTitle, introDetails, apartmentsTitle, apartmentsSubtitle, apartmentsDetails } from '../assets/languages/english/Home page conent';
-import SectionWrapper from '../components/sections/SectionWrapper';
-import PhotoGallery from '../components/PhotoGallery';
-import SectionWithGallery from '../components/sections/SectionWithGallery';
 
 export default function HomePage() {
   return (
@@ -63,13 +61,8 @@ export default function HomePage() {
           <Grid item>
             <SectionWithGallery maxWidth={'xl'} py={5} backgroundColor={'#f7f5f2'}/>
           </Grid>
-          <Grid item display='flex' maxWidth={'xl'} height={{xs: 320, lg: 480, xl: 720}} py={5} justifyContent='center'>
-            <Hidden smUp>
-              <Box mb={2}>
-                <Button variant="outlined" href='https://maps.app.goo.gl/HkwsJ14o2N1ksNi5A'>Open location in Maps</Button>
-              </Box>
-            </Hidden>
-            <Box maxWidth={'xl'} width='100%' height='100%'>
+          <Grid item display='flex' maxWidth={'xl'} height={{xs: 320, lg: 480, xl: 720}} justifyContent='center'>
+            <Box width='100%' height='100%'>
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1472.5595294984394!2d18.701716232092714!3d42.42520059074555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c318493bdf473%3A0x1e92cacdc47948aa!2sPontus%20Luxury%20Apartments!5e0!3m2!1sen!2srs!4v1704753121543!5m2!1sen!2srs"
                 width="100%"
@@ -81,14 +74,6 @@ export default function HomePage() {
             </Box>
           </Grid>
         </Grid> 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        Learn React
-        </a>
       </Box>
     </Page>
   );

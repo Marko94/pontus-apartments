@@ -9,7 +9,9 @@ import ApartmentsPage from './pages/Apartments';
 import ContactPage from './pages/Contact';
 import GalleryPage from './pages/Gallery';
 import HomePage from './pages/Home';
+import { customTheme } from './style/theme';
 import './style/App.css';
+import Footer from './components/footer/Footer';
 
 function App() {
   useEffect(() => {
@@ -18,35 +20,7 @@ function App() {
 
   
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#326273',
-      light: '#5C9ead',
-      dark: '#1c2a3e',
-      contrastText: '#000000',
-    },
-    secondary: {
-      main: '#b3965a',
-      light: '#c2ab7a',
-      dark: '#8f7848',
-      contrastText: '#FFFFFF',
-    }
-  },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: ({ ownerState }) => ({
-          ...(ownerState.variant === 'contained' &&
-            ownerState.color === 'primary' && {
-              backgroundColor: '--primary',
-              color: '#FFF',
-            }),
-        }),
-      },
-    },
-  },
-});
+const theme = createTheme(customTheme);
 
   return (
     <div className="App">
@@ -62,6 +36,7 @@ const theme = createTheme({
                 <Route path="contact" element={<ContactPage/>} />
                 <Route path="*" element={<div/>}/>
             </Routes>
+          <Footer></Footer>
           </Box>
         </BrowserRouter>
       </ThemeProvider>
