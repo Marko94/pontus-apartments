@@ -1,15 +1,20 @@
-import * as React from 'react';
-import Navbar from './components/navbar/Navbar';
-import HomePage from './pages/Home';
-import ApartmentsPage from './pages/Apartments';
-import GalleryPage from './pages/Gallery';
-import ContactPage from './pages/Contact';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box } from '@mui/material';
-import './style/App.css'
-import ScrollToTop from './components/scrollToTop';
+import * as React from 'react';
+import { useEffect } from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ScrollToTop from './components/ScrollToTop';
+import Navbar from './components/navbar/Navbar';
+import ApartmentsPage from './pages/Apartments';
+import ContactPage from './pages/Contact';
+import GalleryPage from './pages/Gallery';
+import HomePage from './pages/Home';
+import './style/App.css';
 
 function App() {
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>
