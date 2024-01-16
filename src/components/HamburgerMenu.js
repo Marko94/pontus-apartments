@@ -11,7 +11,7 @@ const linkStyle = {
   color: 'black'
 };
 
-export default function HamburgerMenu() {
+export default function HamburgerMenu({backgroundColor}) {
   const [isDrawerOpened, setIsDrawerOpened] = React.useState(false);
 
   const changeDrawerOpened = (isOpened) => (_) => {
@@ -26,6 +26,7 @@ export default function HamburgerMenu() {
         aria-controls="menu-appbar"
         onClick={changeDrawerOpened(!isDrawerOpened)}
         color="inherit"
+        sx={{backgroundColor: backgroundColor, transition: backgroundColor ? 0.5 : 0, borderRadius: '15%'}}
       >
         <MenuIcon />
       </IconButton>

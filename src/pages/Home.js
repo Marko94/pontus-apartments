@@ -1,11 +1,12 @@
 import { Box, Grid } from '@mui/material';
 import * as React from 'react';
 import HousePhoto from '../assets/Close up from see.jpg';
-import CoverPhoto from '../assets/View from sea.jpg';
+import CoverPhoto from '../assets/Cover.jpg';
 import ApartmentPhoto from '../assets/apartments/apartment 2/Brown 1.jpg';
 import Cutout from '../assets/decorations/House cutout.png';
+import Arrow from '../assets/decorations/Bottom arrow.png';
 import Squigle from '../assets/decorations/Squigle.png';
-import { apartmentsDetails, apartmentsSubtitle, apartmentsTitle, introDetails, introTitle } from '../assets/languages/english/Home page conent';
+import { apartmentsDetails, apartmentsSubtitle, apartmentsTitle, amenitiesTitle, amenitiesSubtitle, amenitiesDetails, introDetails, introTitle } from '../assets/languages/english/Home page conent';
 import Page from '../components/Page';
 import SectionWithGallery from '../components/sections/SectionWithGallery';
 import SectionWithImage from '../components/sections/SectionWithImage';
@@ -24,7 +25,7 @@ export default function HomePage() {
               titleVariant='h4'
               decoration={Squigle}
               details={introDetails}
-              py={16}
+              py={10}
               maxWidth={'lg'}
             />
           </Grid>
@@ -49,10 +50,12 @@ export default function HomePage() {
           <Grid item p={0}>
             <SectionWithImage
               src={HousePhoto}
-              alt="test"
-              title='Stay with us'
-              subtitle='Enjoy the seaside'
-              details='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+              title={amenitiesTitle}
+              titleVariant='h4'
+              subtitle={amenitiesSubtitle}
+              href={'/apartments'}
+              details={amenitiesDetails}
+              buttonText='View Apartments'
               direction='row-reverse'
               py={5}
               maxWidth={'xl'}

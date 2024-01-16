@@ -8,6 +8,8 @@ const ScrollHandler = props => {
     target: props.window ? window() : undefined
   });
 
+  props.setIsScrolled(!trigger);
+
   return React.cloneElement(props.children, {
     style: {
       backgroundColor: trigger ? "#1c2a3eF6" : "transparent",
@@ -18,7 +20,6 @@ const ScrollHandler = props => {
       minHeight: "65px",
       height: "65px"
     },
-
   });
 };
 

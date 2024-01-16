@@ -48,58 +48,68 @@ import yellow2 from "../assets/apartments/apartment 11/Yellow 2.jpg"
 import yellow3 from "../assets/apartments/apartment 11/Yellow 3.jpg"
 import yellow4 from "../assets/apartments/apartment 11/Yellow 4.jpg"
 import yellow5 from "../assets/apartments/apartment 11/Yellow 5.jpg"
+import gallery1 from "../assets/gallery/Gallery 1.jpg"
+import gallery2 from "../assets/gallery/Gallery 2.jpg"
+import gallery3 from "../assets/gallery/Gallery 3.jpg"
+import gallery4 from "../assets/gallery/Gallery 4.jpg"
+import gallery5 from "../assets/gallery/Gallery 5.jpg"
+import gallery6 from "../assets/gallery/Gallery 6.jpg"
+import gallery7 from "../assets/gallery/Gallery 7.jpg"
+import gallery8 from "../assets/gallery/Gallery 8.jpg"
+import gallery9 from "../assets/gallery/Gallery 9.jpg"
+import gallery10 from "../assets/gallery/Gallery 10.jpg"
 
 export const photosGalery = [
   {
-    src: viewFromSea,
-    width: 5,
-    height: 2,
+    src: gallery3,
+    width: 134,
+    height: 89
   },
   {
-    src: closeUpFromSea,
-    width: 4,
-    height: 3,
+    src: gallery9,
+    width: 241,
+    height: 321
   },
   {
-    src: viewFromSea,
-    width: 5,
-    height: 2
+    src: gallery2,
+    width: 134,
+    height: 89,
   },
   {
-    src: closeUpFromSea,
-    width: 4,
-    height: 3
+    src: gallery8,
+    width: 241,
+    height: 321
   },
   {
-    src: viewFromSea,
-    width: 5,
-    height: 2
+    src: gallery4,
+    width: 134,
+    height: 89
   },
   {
-    src: closeUpFromSea,
-    width: 4,
-    height: 3
-  },
-  {
-    src: viewFromSea,
+    src: gallery7,
     width: 5,
     height: 2
   },
   {
-    src: closeUpFromSea,
-    width: 4,
-    height: 3
+    src: gallery1,
+    width: 134,
+    height: 89,
   },
   {
-    src: viewFromSea,
-    width: 5,
-    height: 2
+    src: gallery10,
+    width: 241,
+    height: 321
   },
   {
-    src: closeUpFromSea,
-    width: 4,
-    height: 3
-  }
+    src: gallery5,
+    width: 134,
+    height: 89
+  },
+  {
+    src: gallery6,
+    width: 134,
+    height: 89
+  },
 ];
 
 export const apartmentOne = [
