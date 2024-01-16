@@ -4,9 +4,9 @@ import * as React from 'react';
 import InfoPanel from '../PhoneInfoPanel';
 
 export default function Footer(props) {
-  
+
   return (
-    <Box display='flex' width='100%' sx={{bgcolor: '#f7f5f2'}} justifyContent='center' py={8} px={{xs: 6, md: 0}}>
+    <Box display='flex' width='100%' sx={{bgcolor: '#f7f5f2'}} justifyContent='center' py={8}>
       <Grid container direction={{xs: 'column', lg: 'row'}} width='100%' maxWidth='xl' height='100%' spacing={{xs: 4, md: 0}}>
         <Grid item xs={4}>
           <Box display='flex' flexDirection='column' alignItems='center' height='100%' textAlign='left'>
