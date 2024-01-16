@@ -1,5 +1,5 @@
-import React from "react";
 import { useScrollTrigger } from "@mui/material";
+import React, { useLayoutEffect } from "react";
 
 const ScrollHandler = props => {
   const trigger = useScrollTrigger({
@@ -8,7 +8,10 @@ const ScrollHandler = props => {
     target: props.window ? window() : undefined
   });
 
-  props.setIsScrolled(!trigger);
+  useLayoutEffect(()=> {
+    props.setIsScrolled(!trigger);
+  }, [trigger]);
+  
 
   return React.cloneElement(props.children, {
     style: {

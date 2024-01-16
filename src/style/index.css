@@ -13,6 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   .Section {
+    will-change: transform, opacity;
     transform: translateY(75px);
     opacity: 0;
     transition: 1s all ease;
@@ -22,6 +23,7 @@ body {
     transform: translateY(0px);
     opacity: 1;
   }
+
   h3 {
     color: var(--primary-light) !important;
   }
