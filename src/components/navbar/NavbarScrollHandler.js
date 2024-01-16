@@ -20,8 +20,8 @@ const ScrollHandler = props => {
       transition: trigger ? "0.2s" : "0.3s",
       boxShadow: "none",
       padding: "10px 0px",
-      minHeight: "65px",
-      height: "65px"
+      minHeight: "95px",
+      height: "95px"
     },
   });
 };
