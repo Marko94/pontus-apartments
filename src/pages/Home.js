@@ -1,12 +1,11 @@
 import { Box, Grid } from '@mui/material';
 import * as React from 'react';
-import PoolPhoto from '../assets/gallery/Gallery 1.jpg';
 import CoverPhoto from '../assets/Cover.jpg';
 import ApartmentPhoto from '../assets/apartments/apartment 2/Brown 1.jpg';
 import Cutout from '../assets/decorations/House cutout.png';
-import Arrow from '../assets/decorations/Bottom arrow.png';
 import Squigle from '../assets/decorations/Squigle.png';
-import { apartmentsDetails, apartmentsSubtitle, apartmentsTitle, amenitiesTitle, amenitiesSubtitle, amenitiesDetails, introDetails, introTitle } from '../assets/languages/english/Home page conent';
+import PoolPhoto from '../assets/gallery/Gallery 1.jpg';
+import { apartmentsDetails, apartmentsSubtitle, apartmentsTitle, introDetails, introTitle, policiesDetails, policiesSubtitle, policiesTitle } from '../assets/languages/english/Home page conent';
 import Page from '../components/Page';
 import SectionWithGallery from '../components/sections/SectionWithGallery';
 import SectionWithImage from '../components/sections/SectionWithImage';
@@ -50,12 +49,12 @@ export default function HomePage() {
           <Grid item p={0}>
             <SectionWithImage
               src={PoolPhoto}
-              title={amenitiesTitle}
+              title={policiesTitle}
               titleVariant='h4'
-              subtitle={amenitiesSubtitle}
-              href={'/apartments'}
-              details={amenitiesDetails}
-              buttonText='View Amenities'
+              subtitle={policiesSubtitle}
+              href={'/policies'}
+              details={policiesDetails}
+              buttonText='View policies'
               direction='row-reverse'
               py={5}
               maxWidth={'xl'}
