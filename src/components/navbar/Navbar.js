@@ -15,7 +15,7 @@ export default function Navbar() {
     <NavbarScrollHandler setIsScrolled={setIsScrolled}>
       <AppBar variant="sticky" color="transparent" className="Nav-bar" sx={{boxShadow: "none"}}>
         <Toolbar>
-          <Grid container spacing={2} alignItems='center' className='Nav-bar-grid-container' borderBottom={isScrolled ? '2px solid rgba(0,0,0,.07)' : ''}>
+          <Grid container spacing={2} alignItems='center' className='Nav-bar-grid-container'>
             <Grid item xs={2}>
               <Hidden lgDown>
                 <PhoneInfoPanel/>

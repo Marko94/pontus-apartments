@@ -1,11 +1,12 @@
 import { Box, Grid } from '@mui/material';
 import * as React from 'react';
-import CoverPhoto from '../assets/View from sea.jpg';
+import CoverPhoto from '../assets/Apartments cover.jpg';
 import Page from '../components/Page.js';
 import SectionWithCarousel from '../components/sections/SectionWithCarousel';
 import SectionWithText from '../components/sections/SectionWithText.js';
 import { apartmentEight, apartmentEleven, apartmentFive, apartmentFour, apartmentNine, apartmentOne, apartmentSeven, apartmentSix, apartmentTen, apartmentThree, apartmentTwo } from "../constants/photos.js";
 import '../style/pages/Apartments.css';
+import SectionWithIcons from '../components/sections/SectionWithIcons.js';
 
 const spacing = {xs: 1, md: 3};
 
@@ -23,6 +24,9 @@ export default function ApartmentsPage() {
               maxWidth={'xl'}
               sx={{ p: {xs:0, md: 8} }}
             />
+          </Grid>
+          <Grid item p={0}>
+            <SectionWithIcons maxWidth={'xl'}/>
           </Grid>
           <Grid item p={0}>
             <SectionWithCarousel
