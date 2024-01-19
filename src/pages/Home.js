@@ -1,6 +1,6 @@
 import { Box, Grid } from '@mui/material';
 import * as React from 'react';
-import HousePhoto from '../assets/Close up from see.jpg';
+import PoolPhoto from '../assets/gallery/Gallery 1.jpg';
 import CoverPhoto from '../assets/Cover.jpg';
 import ApartmentPhoto from '../assets/apartments/apartment 2/Brown 1.jpg';
 import Cutout from '../assets/decorations/House cutout.png';
@@ -49,13 +49,13 @@ export default function HomePage() {
           </Grid>
           <Grid item p={0}>
             <SectionWithImage
-              src={HousePhoto}
+              src={PoolPhoto}
               title={amenitiesTitle}
               titleVariant='h4'
               subtitle={amenitiesSubtitle}
               href={'/apartments'}
               details={amenitiesDetails}
-              buttonText='View Apartments'
+              buttonText='View Amenities'
               direction='row-reverse'
               py={5}
               maxWidth={'xl'}

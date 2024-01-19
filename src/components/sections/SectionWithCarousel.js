@@ -1,4 +1,4 @@
-import { Box, Grid } from '@mui/material';
+import { Box, Button, Grid } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import React from "react";
@@ -8,7 +8,7 @@ import '../../style/components/sections/SectionWithCarousel.css';
 import TextWithTitle from '../TextWithTitle';
 import SectionWrapper from './SectionWrapper';
 
-export default function SectionWithCarousel({photos, alt, title, subtitle, details, decoration, direction, spacing, backgroundColor, maxWidth}) {
+export default function SectionWithCarousel({photos, alt, title, subtitle, details, buttonText, decoration, direction, spacing, backgroundColor, maxWidth, href}) {
   const theme = useTheme();
   const smUp = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -37,6 +37,11 @@ export default function SectionWithCarousel({photos, alt, title, subtitle, detai
               decoration={decoration}
               spacing={1}
             />
+            {href && 
+              <Box p={2}>
+                <Button variant='contained' color="secondary" href={href} disableElevation>{buttonText || 'Book now'}</Button>
+              </Box>
+            }
           </Grid>
         </Grid>
       </Box>

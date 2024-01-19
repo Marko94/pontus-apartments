@@ -4,9 +4,11 @@ import CoverPhoto from '../assets/Apartments cover.jpg';
 import Page from '../components/Page.js';
 import SectionWithCarousel from '../components/sections/SectionWithCarousel';
 import SectionWithText from '../components/sections/SectionWithText.js';
+import { introTitle, introSubtitle, introDetails, introBulletList1, introBulletList2 } from '../assets/languages/english/Apartments page content.js';
 import { apartmentEight, apartmentEleven, apartmentFive, apartmentFour, apartmentNine, apartmentOne, apartmentSeven, apartmentSix, apartmentTen, apartmentThree, apartmentTwo } from "../constants/photos.js";
 import '../style/pages/Apartments.css';
 import SectionWithIcons from '../components/sections/SectionWithIcons.js';
+import SectionWithBulletPoints from '../components/sections/SectionWithBulletPoints.js';
 
 const spacing = {xs: 1, md: 3};
 
@@ -18,9 +20,10 @@ export default function ApartmentsPage() {
         <Grid container direction='column' spacing={{xs: 0, md:4}} className='Apartments-content'>
           <Grid item p={0}>
             <SectionWithText
-              title="Welcome"
-              subtitle="Your new favorite holiday location!"
-              details="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              title={introTitle}
+              subtitle={introSubtitle}
+              subtitleVariant='h5'
+              details={introDetails}
               maxWidth={'xl'}
               sx={{ p: {xs:0, md: 8} }}
             />
@@ -29,12 +32,16 @@ export default function ApartmentsPage() {
             <SectionWithIcons maxWidth={'xl'}/>
           </Grid>
           <Grid item p={0}>
+            <SectionWithBulletPoints maxWidth={'xl'} introBulletList1={introBulletList1} introBulletList2={introBulletList2}/>
+          </Grid>
+          <Grid item p={0}>
             <SectionWithCarousel
               photos={apartmentOne}
               alt="apartment-1"
               title='Apartment 1'
               details='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
               direction='row'
+              href='/policies'
               spacing={spacing}
               backgroundColor={'#f7f5f2'}
               maxWidth={'xl'}

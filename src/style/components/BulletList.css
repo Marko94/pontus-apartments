@@ -1,0 +1,15 @@
+.Bullet-list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: left;
+  height: 100%;
+  width: 100%;
+  text-align: justify;
+
+  .Bullet-icon {
+    width: 9px;
+    height: 9px;
+    margin-right: 6px;
+  }
+}
