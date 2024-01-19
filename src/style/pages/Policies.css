@@ -1,12 +1,8 @@
-.Gallery-page-container {
+.Policies-page-container {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 14pt;
   padding: 48px;
-}
-
-.Gallery-page-modal {
-  z-index: 15;
 }

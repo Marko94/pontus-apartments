@@ -5,14 +5,14 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/navbar/Navbar';
+import HomePage from './pages/Home';
 import ApartmentsPage from './pages/Apartments';
 import ContactPage from './pages/Contact';
-import GalleryPage from './pages/Gallery';
-import HomePage from './pages/Home';
+import PoliciesPage from './pages/Gallery';
+import NotFoundPage from './pages/NotFound';
 import { customTheme } from './style/theme';
 import './style/App.css';
 import Footer from './components/footer/Footer';
-import NotFoundPage from './pages/NotFound';
 
 function App() {
   useEffect(() => {
@@ -33,7 +33,7 @@ const theme = createTheme(customTheme);
             <Routes>
                 <Route index path="/" element={<HomePage/>} />
                 <Route path="apartments" element={<ApartmentsPage/>} />
-                <Route path="gallery" element={<GalleryPage/>} />
+                <Route path="policies" element={<PoliciesPage/>} />
                 <Route path="contact" element={<ContactPage/>} />
                 <Route path="*" element={<NotFoundPage/>}/>
             </Routes>

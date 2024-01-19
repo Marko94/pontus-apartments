@@ -3,7 +3,7 @@ import React, { useCallback, useState } from "react";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import Gallery from "react-photo-gallery";
 import { photosGalery } from "../constants/photos";
-import '../style/pages/Gallery.css';
+import '../style/components/PhotoGallery.css';
 
 
 export default function PhotoGallery({maxWidth, title}) {
@@ -28,7 +28,7 @@ export default function PhotoGallery({maxWidth, title}) {
       <Gallery photos={photosGalery} onClick={openLightbox} />
       <ModalGateway>
         {viewerIsOpen ? (
-          <Modal onClose={closeLightbox} allowFullscreen={false} className="Gallery-page-modal">
+          <Modal onClose={closeLightbox} allowFullscreen={false} className="Gallery-modal">
             <Carousel
               currentIndex={currentImage}
               views={photosGalery.map(photo => ({

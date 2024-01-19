@@ -1,3 +1,3 @@
-const pages = ['Home', 'Apartments', 'Gallery', 'Contact'];
+const pages = ['Home', 'Apartments', 'Policies', 'Contact'];
 
 export default pages;

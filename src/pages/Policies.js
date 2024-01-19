@@ -1,17 +1,16 @@
 import React from "react";
 import Page from '../components/Page';
-import '../style/pages/Gallery.css';
+import '../style/pages/Policies.css';
 import SectionWrapper from "../components/sections/SectionWrapper";
-import PhotoGallery from "../components/PhotoGallery";
 import { Box } from "@mui/material";
 
 
-export default function GalleryPage() {
+export default function PoliciesPage() {
   return (
     <Page>
       <SectionWrapper>
-        <Box className='Gallery-page-container' flex alignItems='center' justifyContent='center'>
-          <PhotoGallery/>
+        <Box className='Policies-page-container' flex alignItems='center' justifyContent='center'>
+          
         </Box>
       </SectionWrapper>
     </Page>
