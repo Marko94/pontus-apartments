@@ -12,6 +12,7 @@ import HomePage from './pages/Home';
 import { customTheme } from './style/theme';
 import './style/App.css';
 import Footer from './components/footer/Footer';
+import NotFoundPage from './pages/NotFound';
 
 function App() {
   useEffect(() => {
@@ -34,9 +35,9 @@ const theme = createTheme(customTheme);
                 <Route path="apartments" element={<ApartmentsPage/>} />
                 <Route path="gallery" element={<GalleryPage/>} />
                 <Route path="contact" element={<ContactPage/>} />
-                <Route path="*" element={<div/>}/>
+                <Route path="*" element={<NotFoundPage/>}/>
             </Routes>
-          <Footer></Footer>
+            <Footer/>
           </Box>
         </BrowserRouter>
       </ThemeProvider>
