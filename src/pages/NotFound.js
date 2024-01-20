@@ -18,7 +18,7 @@ export default function NotFoundPage() {
       <Typography variant="h4">
         The page you're looking for doesn't exist.
       </Typography>
-      <Button href='/pontus-apartments' variant="contained" color="secondary" sx={{mt: 2}}>Back Home</Button>
+      <Button href='/' variant="contained" color="secondary" sx={{mt: 2}}>Back Home</Button>
     </Box>
   );
 }

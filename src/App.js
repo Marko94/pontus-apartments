@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import * as React from 'react';
 import { useEffect } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/navbar/Navbar';
 import HomePage from './pages/Home';
@@ -29,20 +29,20 @@ const theme = createTheme(customTheme);
     <div className="App">
       <ThemeProvider theme={theme}>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <HashRouter>
+          <BrowserRouter>
             <ScrollToTop/>
             <Navbar/>
             <Box className="content-wrapper">
               <Routes>
-                  <Route index path="/pontus-apartments" element={<HomePage/>} />
-                  <Route path="pontus-apartments/apartments" element={<ApartmentsPage/>} />
-                  <Route path="pontus-apartments/policies" element={<PoliciesPage/>} />
-                  <Route path="pontus-apartments/contact" element={<ContactPage/>} />
+                  <Route index path="/" element={<HomePage/>} />
+                  <Route path="apartments" element={<ApartmentsPage/>} />
+                  <Route path="policies" element={<PoliciesPage/>} />
+                  <Route path="contact" element={<ContactPage/>} />
                   <Route path="*" element={<NotFoundPage/>}/>
               </Routes>
               <Footer/>
             </Box>
-          </HashRouter>
+          </BrowserRouter>
         </LocalizationProvider>
       </ThemeProvider>
       
