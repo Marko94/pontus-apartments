@@ -18,7 +18,6 @@ export default function SectionWithText({title, titleVariant, subtitle, subtitle
             decoration={decoration}
             details={details} 
             spacing={2}
-            max-width='100vw'
           />
         </Box>
       </Box>

@@ -25,7 +25,7 @@ export default function HomePage() {
               decoration={Squigle}
               details={introDetails}
               py={10}
-              maxWidth={'lg'}
+              maxWidth={'xl'}
             />
           </Grid>
           <Grid item p={0}>

@@ -8,7 +8,7 @@ import Navbar from './components/navbar/Navbar';
 import HomePage from './pages/Home';
 import ApartmentsPage from './pages/Apartments';
 import ContactPage from './pages/Contact';
-import PoliciesPage from './pages/Gallery';
+import PoliciesPage from './pages/Policies';
 import NotFoundPage from './pages/NotFound';
 import { customTheme } from './style/theme';
 import './style/App.css';

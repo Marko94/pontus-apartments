@@ -32,7 +32,7 @@ export default function ApartmentsPage() {
             <SectionWithIcons maxWidth={'xl'}/>
           </Grid>
           <Grid item p={0}>
-            <SectionWithBulletPoints maxWidth={'xl'} introBulletList1={introBulletList1} introBulletList2={introBulletList2}/>
+            <SectionWithBulletPoints maxWidth={'xl'} bulletList1={introBulletList1} bulletList2={introBulletList2}/>
           </Grid>
           <Grid item p={0}>
             <SectionWithCarousel
