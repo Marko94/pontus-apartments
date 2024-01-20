@@ -10,6 +10,8 @@ import ApartmentsPage from './pages/Apartments';
 import ContactPage from './pages/Contact';
 import PoliciesPage from './pages/Policies';
 import NotFoundPage from './pages/NotFound';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { customTheme } from './style/theme';
 import './style/App.css';
 import Footer from './components/footer/Footer';
@@ -26,20 +28,22 @@ const theme = createTheme(customTheme);
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <ScrollToTop/>
-          <Navbar/>
-          <Box className="content-wrapper">
-            <Routes>
-                <Route index path="/" element={<HomePage/>} />
-                <Route path="apartments" element={<ApartmentsPage/>} />
-                <Route path="policies" element={<PoliciesPage/>} />
-                <Route path="contact" element={<ContactPage/>} />
-                <Route path="*" element={<NotFoundPage/>}/>
-            </Routes>
-            <Footer/>
-          </Box>
-        </BrowserRouter>
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <BrowserRouter>
+            <ScrollToTop/>
+            <Navbar/>
+            <Box className="content-wrapper">
+              <Routes>
+                  <Route index path="/" element={<HomePage/>} />
+                  <Route path="apartments" element={<ApartmentsPage/>} />
+                  <Route path="policies" element={<PoliciesPage/>} />
+                  <Route path="contact" element={<ContactPage/>} />
+                  <Route path="*" element={<NotFoundPage/>}/>
+              </Routes>
+              <Footer/>
+            </Box>
+          </BrowserRouter>
+        </LocalizationProvider>
       </ThemeProvider>
       
     </div>

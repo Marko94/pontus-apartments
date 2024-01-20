@@ -2,7 +2,6 @@ import React from "react";
 import Page from '../components/Page';
 import CoverPhoto from '../assets/Policies cover.jpg'
 import '../style/pages/Policies.css';
-import SectionWrapper from "../components/sections/SectionWrapper";
 import Squigle from '../assets/decorations/Squigle.png';
 import { Box, Grid } from "@mui/material";
 import SectionWithText from "../components/sections/SectionWithText";
