@@ -29,15 +29,15 @@ const theme = createTheme(customTheme);
     <div className="App">
       <ThemeProvider theme={theme}>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <HashRouter basename='/pontus-apartments'>
+          <HashRouter>
             <ScrollToTop/>
             <Navbar/>
             <Box className="content-wrapper">
               <Routes>
-                  <Route index path="/" element={<HomePage/>} />
-                  <Route path="apartments" element={<ApartmentsPage/>} />
-                  <Route path="policies" element={<PoliciesPage/>} />
-                  <Route path="contact" element={<ContactPage/>} />
+                  <Route index path="/pontus-apartments" element={<HomePage/>} />
+                  <Route path="pontus-apartments/apartments" element={<ApartmentsPage/>} />
+                  <Route path="pontus-apartments/policies" element={<PoliciesPage/>} />
+                  <Route path="pontus-apartments/contact" element={<ContactPage/>} />
                   <Route path="*" element={<NotFoundPage/>}/>
               </Routes>
               <Footer/>

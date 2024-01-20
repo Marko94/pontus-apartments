@@ -35,7 +35,7 @@ export default function HomePage() {
               title={apartmentsTitle}
               titleVariant='h4'
               subtitle={apartmentsSubtitle}
-              href={'/apartments'}
+              href={'/pontus-apartments/apartments'}
               details={apartmentsDetails}
               buttonText='View Apartments'
               direction='row'
@@ -52,7 +52,7 @@ export default function HomePage() {
               title={policiesTitle}
               titleVariant='h4'
               subtitle={policiesSubtitle}
-              href={'/policies'}
+              href={'/pontus-apartments/policies'}
               details={policiesDetails}
               buttonText='View policies'
               direction='row-reverse'
