@@ -29,7 +29,7 @@ const theme = createTheme(customTheme);
     <div className="App">
       <ThemeProvider theme={theme}>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <BrowserRouter>
+          <BrowserRouter basename='/pontus-apartments'>
             <ScrollToTop/>
             <Navbar/>
             <Box className="content-wrapper">
