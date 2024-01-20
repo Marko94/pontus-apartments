@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Marko94/pontus-apartments/static/css/main.90ccff0d.css",
-    "main.js": "/Marko94/pontus-apartments/static/js/main.d197352a.js",
+    "main.js": "/Marko94/pontus-apartments/static/js/main.bc074716.js",
     "static/media/Apartments cover.jpg": "/Marko94/pontus-apartments/static/media/Apartments cover.cfb5e268734485b34c27.jpg",
     "static/media/Gallery 4.jpg": "/Marko94/pontus-apartments/static/media/Gallery 4.4611275c3df5b78bbe29.jpg",
     "static/media/Gallery 2.jpg": "/Marko94/pontus-apartments/static/media/Gallery 2.8f14cad343a3ef613d0c.jpg",
@@ -67,10 +67,10 @@
     "static/media/View from sea.jpg": "/Marko94/pontus-apartments/static/media/View from sea.af415a74443f6399dee3.jpg",
     "index.html": "/Marko94/pontus-apartments/index.html",
     "main.90ccff0d.css.map": "/Marko94/pontus-apartments/static/css/main.90ccff0d.css.map",
-    "main.d197352a.js.map": "/Marko94/pontus-apartments/static/js/main.d197352a.js.map"
+    "main.bc074716.js.map": "/Marko94/pontus-apartments/static/js/main.bc074716.js.map"
   },
   "entrypoints": [
     "static/css/main.90ccff0d.css",
-    "static/js/main.d197352a.js"
+    "static/js/main.bc074716.js"
   ]
 }
