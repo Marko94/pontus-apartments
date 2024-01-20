@@ -23,7 +23,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://github.com/Marko94/pontus-apartments",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -49,6 +48,5 @@
   },
   "devDependencies": {
     "react-router-dom": "^6.20.1"
-  },
-  "homepage": "https://github.com/Marko94/pontus-apartments"
+  }
 }
