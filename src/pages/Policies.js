@@ -6,7 +6,7 @@ import SectionWrapper from "../components/sections/SectionWrapper";
 import Squigle from '../assets/decorations/Squigle.png';
 import { Box, Grid } from "@mui/material";
 import SectionWithText from "../components/sections/SectionWithText";
-import { generalBulletList1, generalBulletList2, poolBulletList1, poolBulletList2, transportBulletList1, transportBulletList2, introDetails, introTitle, locationBulletList1 } from "../assets/languages/english/Policies page content";
+import { generalBulletList1, generalBulletList2, paymentTitle, paymentDetails, poolBulletList1, poolBulletList2, transportBulletList1, transportBulletList2, introDetails, introTitle, locationBulletList1 } from "../assets/languages/english/Policies page content";
 import SectionWithBulletPoints from "../components/sections/SectionWithBulletPoints";
 
 
@@ -23,6 +23,15 @@ export default function PoliciesPage() {
                 titleVariant='h4'
                 decoration={Squigle}
                 details={introDetails}
+                py={4}
+                maxWidth={'xl'}
+              />
+            </Grid>
+            <Grid item p={0}>
+              <SectionWithText
+                title={paymentTitle}
+                titleVariant='h5'
+                details={paymentDetails}
                 py={4}
                 maxWidth={'xl'}
               />
