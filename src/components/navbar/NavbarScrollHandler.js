@@ -10,7 +10,7 @@ const ScrollHandler = props => {
 
   useLayoutEffect(()=> {
     props.setIsScrolled(!trigger);
-  }, [trigger]);
+  }, [trigger, props.setIsScrolled]);
   
 
   return React.cloneElement(props.children, {

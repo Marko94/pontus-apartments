@@ -1,14 +1,13 @@
-import * as React from 'react';
-import SectionWrapper from './SectionWrapper';
-import WifiIcon from '@mui/icons-material/Wifi';
-import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import BalconyIcon from '@mui/icons-material/Balcony';
+import BeachAccessIcon from '@mui/icons-material/BeachAccess';
 import MicrowaveIcon from '@mui/icons-material/Microwave';
 import PoolOutlinedIcon from '@mui/icons-material/PoolOutlined';
-import PanoramaOutlinedIcon from '@mui/icons-material/PanoramaOutlined';
-import '../../style/components/sections/SectionWithIcons.css';
+import WifiIcon from '@mui/icons-material/Wifi';
 import { Box } from '@mui/material';
+import * as React from 'react';
+import '../../style/components/sections/SectionWithIcons.css';
 import IconBox from '../IconBox';
+import SectionWrapper from './SectionWrapper';
 
 export default function SectionWithIcons({title, titleVariant, subtitle, decoration, details, backgroundColor, maxWidth, py}) {
 

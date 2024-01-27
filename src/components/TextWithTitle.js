@@ -21,7 +21,7 @@ export default function TextWithTitle({
       <Grid item display='flex' alignItems='center'>
         <Typography variant={subtitleVariant} color='primary'>{subtitle}</Typography>
         {decoration && 
-          <img src={decoration}/>
+          <img src={decoration} alt='decoration'/>
         }
       </Grid>
       <Grid item display='flex' alignItems='center'>

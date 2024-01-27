@@ -1,5 +1,3 @@
-import viewFromSea from "../assets/View from sea.jpg"
-import closeUpFromSea from "../assets/Close up from see.jpg"
 import blue1 from "../assets/apartments/apartment 1/Blue 1.jpg"
 import blue2 from "../assets/apartments/apartment 1/Blue 2.jpg"
 import blue3 from "../assets/apartments/apartment 1/Blue 3.jpg"

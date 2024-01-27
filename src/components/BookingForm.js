@@ -14,7 +14,7 @@ export default function BookingForm({spacing, width}) {
     if (endDate.isBefore(newStartDate)) {
       setEndDate(newStartDate.add(1, 'day'));
     }
-  })
+  }, [endDate])
 
   return (
     <Box component='form' className='Booking-form'>
