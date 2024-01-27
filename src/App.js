@@ -17,13 +17,11 @@ import './style/App.css';
 import Footer from './components/footer/Footer';
 
 function App() {
+  const theme = createTheme(customTheme);
+  
   useEffect(() => {
     window.history.scrollRestoration = 'manual'
   }, []);
-
-  
-
-const theme = createTheme(customTheme);
 
   return (
     <div className="App">

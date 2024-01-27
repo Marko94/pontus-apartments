@@ -1,23 +1,24 @@
 import { useScrollTrigger } from "@mui/material";
 import React, { useLayoutEffect } from "react";
 
-const ScrollHandler = props => {
+const ScrollHandler = ({window, setIsScrolled, children}) => {
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
-    target: props.window ? window() : undefined
+    target: window ? window() : undefined
   });
 
   useLayoutEffect(()=> {
-    props.setIsScrolled(!trigger);
-  }, [trigger, props.setIsScrolled]);
+    setIsScrolled(!trigger);
+  }, [trigger, setIsScrolled]);
   
 
-  return React.cloneElement(props.children, {
+  return React.cloneElement(children, {
     style: {
       backgroundColor: trigger ? "#1c2a3eF6" : "transparent",
       color: trigger ? "white" : "black",
-      transition: trigger ? "0.2s" : "0.3s",
+      transitionDuration: trigger ? "0.2s" : "0.3s",
+      transitionProperty: "backgroundColor, color",
       boxShadow: "none",
       padding: "10px 0px",
       minHeight: "95px",
