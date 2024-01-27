@@ -21,11 +21,11 @@ export default function PhotoGallery({maxWidth, title}) {
   };
 
   return (
-    <Box maxWidth={maxWidth}>
+    <Box maxWidth={maxWidth} display='block' margin='auto'>
       {title && 
         <Typography variant='h3' pb={2}>{title}</Typography>
       }
-      <Gallery photos={photosGalery} onClick={openLightbox} />
+      <Gallery photos={photosGalery} onClick={openLightbox}/>
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox} allowFullscreen={false} className="Gallery-modal">
