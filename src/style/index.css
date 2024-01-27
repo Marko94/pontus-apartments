@@ -16,7 +16,7 @@ body {
     will-change: transform, opacity;
     transform: translateY(75px);
     opacity: 0;
-    transition: 1s all ease;
+    transition: 1s opacity ease, 1s transform ease;
   }
 
   .Section.Active {
