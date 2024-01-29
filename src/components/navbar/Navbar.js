@@ -6,7 +6,7 @@ import { useState } from 'react';
 import PhoneInfoPanel from '../PhoneInfoPanel';
 import { Grid, Hidden } from '@mui/material';
 import '../../style/components/Navbar.css'
-import HamburgerMenu from '../HamburgerMenu';
+import HamburgerMenu from './HamburgerMenu';
 import NavbarScrollHandler from './NavbarScrollHandler';
 
 export default function Navbar() {

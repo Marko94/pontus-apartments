@@ -10,6 +10,7 @@ export const customTheme = {
       main: '#b3965a',
       light: '#c2ab7a',
       dark: '#8f7848',
+      extraLight: '#f7f5f2',
       contrastText: '#FFFFFF',
     }
   },
