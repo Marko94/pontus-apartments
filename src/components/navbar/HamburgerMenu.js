@@ -3,11 +3,12 @@ import { Box, Divider, IconButton, MenuItem, SwipeableDrawer } from "@mui/materi
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import pages from '../../constants/pages';
+import BookNowButton from '../BookNowButton';
 
 const linkStyle = {
   fontSize: '14pt',
   fontWeight: 650,
-  textDecoration: "none",
+  textDecoration: 'none',
   flex: 1,
   color: 'black'
 };
@@ -40,13 +41,15 @@ export default function HamburgerMenu({backgroundColor}) {
         PaperProps={{sx: {width: {xs: '75%', md: 480}}}}
         disableSwipeToOpen
       >
-        <Box width='100%' height={95} bgcolor='primary.dark'></Box>
+        <Box width='100%' height={95} bgcolor='primary.dark' display='flex' justifyContent='center' alignItems='center'>
+          <BookNowButton/>
+        </Box>
         <Divider/>
         {pages.map((page) => (
-          <Box height={48} width='100%' display='flex' alignItems='center' justifyContent='start' p={1} borderBottom='1px solid rgba(0, 0, 0, 0.12)' bgcolor='secondary.extraLight'>
-            <MenuItem key={page}>
-              <Link to={page === pages[0] ? "/" : page.toLocaleLowerCase()} onClick={changeDrawerOpened(false)} style={linkStyle}>{page}</Link>
-            </MenuItem>
+          <Box height={48} width='100%' display='flex' alignItems='center' justifyContent='start' p={0} borderBottom='1px solid rgba(0, 0, 0, 0.12)' bgcolor='secondary.extraLight'>
+            <Link to={page === pages[0] ? "/" : page.toLocaleLowerCase()} onClick={changeDrawerOpened(false)} style={linkStyle}>
+              <MenuItem key={page} style={linkStyle}>{page}</MenuItem>
+            </Link>
           </Box>
         ))}
       </SwipeableDrawer>
