@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <Page>
       <Box className='Home-page-container' flex>
-        <img src={CoverPhoto} className="Cover-image" alt="Cover"/>
+        <Box component="img" src={CoverPhoto} className="Cover-image" alt="Cover" sx={{aspectRatio: {xs: 24/18, md:24/9}}}/>
         <Grid container direction='column' spacing={0} className='Home-content'>
           <Grid item p={0}>
             <SectionWithText

@@ -10,7 +10,6 @@
     .Cover-image {
       opacity: 0;
       animation: Element-appear 0.75s ease-out forwards;
-      aspect-ratio: 24/9;
       animation-delay: 0.5s;
       clip-path: polygon(0% 0%, 100% 0, 100% 85%, 50% 100%, 0 85%);
       z-index: 2;
