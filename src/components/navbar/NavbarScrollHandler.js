@@ -17,8 +17,8 @@ const ScrollHandler = ({window, setIsScrolled, children}) => {
     style: {
       backgroundColor: trigger ? "#1c2a3eF6" : "transparent",
       color: trigger ? "white" : "black",
-      transitionDuration: trigger ? "0.2s" : "0.3s",
-      transitionProperty: "backgroundColor, color",
+      transitionDuration: trigger ? "0.4s" : "0.5s",
+      transitionProperty: "background-color, color",
       boxShadow: "none",
       padding: "10px 0px",
       minHeight: "95px",
