@@ -8,6 +8,12 @@
   .Image-container {
     background-color: #aaaaaa20;
     overflow: hidden;
+    
+    .Image {
+      height: 100%;
+      aspect-ratio: initial;
+      object-fit: cover;
+    }
   }
 
   .Text-wrapper {

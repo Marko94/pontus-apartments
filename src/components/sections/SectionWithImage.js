@@ -11,7 +11,7 @@ export default function SectionWithImage({ src, alt, title, titleVariant = 'h4',
       <Box className='Section-with-image-container Section'>
         <Grid container maxWidth={maxWidth} direction={direction} sx={{py: spacing}}>
           <Grid item xs={12} md={6} display='flex' alignItems='center' className='Image-container' borderRadius={{xs: 0, md: 4}}>
-            <img src={src} alt={alt} display='block' height='auto' width='100%' />
+            <img src={src} alt={alt} display='block' height='auto' width='100%' className='Image'/>
           </Grid>
           <Grid item xs={12} md={6} className='Text-wrapper'  p={{xs: 3, md: 6}}>
             <TextWithTitle
