@@ -1,10 +1,11 @@
-import { Box, Button, Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import React from "react";
 import ReactImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import '../../style/components/sections/SectionWithCarousel.css';
+import BookNowButton from '../BookNowButton';
 import TextWithTitle from '../TextWithTitle';
 import SectionWrapper from './SectionWrapper';
 
@@ -39,7 +40,7 @@ export default function SectionWithCarousel({photos, alt, title, subtitle, detai
             />
             {href && 
               <Box p={2}>
-                <Button variant='contained' color="secondary" href={href} disableElevation>{buttonText || 'Book now'}</Button>
+                <BookNowButton/>
               </Box>
             }
           </Grid>
