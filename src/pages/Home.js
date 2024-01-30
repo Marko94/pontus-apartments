@@ -24,6 +24,7 @@ export default function HomePage() {
               titleVariant='h4'
               decoration={Squigle}
               details={introDetails}
+              showBookNowButton={true}
               py={10}
               maxWidth={'xl'}
             />

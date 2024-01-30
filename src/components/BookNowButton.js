@@ -1,8 +1,8 @@
 import { Button } from '@mui/material';
 import * as React from 'react';
 
-export default function BookNowButton() {
+export default function BookNowButton({style}) {
   return (
-    <Button variant='contained' color="secondary" size='large' href='/contact' disableElevation>{'Book now'}</Button>
+    <Button variant='contained' color="secondary" size='large' href='/contact' disableElevation style={style} >{'Book now'}</Button>
   );
 }
