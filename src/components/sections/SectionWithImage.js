@@ -4,12 +4,12 @@ import '../../style/components/sections/SectionWithImage.css';
 import TextWithTitle from '../TextWithTitle';
 import SectionWrapper from './SectionWrapper';
 
-export default function SectionWithImage({ src, alt, title, titleVariant = 'h4', subtitle, decoration, details, buttonText, direction, maxWidth, backgroundColor, backgroundImage, backgroundPosition, spacing, py=1, href }) {
+export default function SectionWithImage({ src, alt, title, titleVariant = 'h4', subtitle, decoration, details, buttonText, direction, maxWidth, backgroundColor, backgroundImage, backgroundPosition, spacing, py=1, px, href }) {
 
   return (
     <SectionWrapper py={py} backgroundColor={backgroundColor} backgroundImage={backgroundImage} backgroundPosition={backgroundPosition}>
       <Box className='Section-with-image-container Section'>
-        <Grid container maxWidth={maxWidth} direction={direction} sx={{py: spacing}}>
+        <Grid container maxWidth={maxWidth} direction={direction} px={px} sx={{py: spacing}}>
           <Grid item xs={12} md={6} display='flex' alignItems='center' className='Image-container' borderRadius={{xs: 0, md: 4}}>
             <img src={src} alt={alt} display='block' height='auto' width='100%' className='Image'/>
           </Grid>

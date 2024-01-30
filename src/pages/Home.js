@@ -45,6 +45,7 @@ export default function HomePage() {
               backgroundColor={'#f7f5f2'}
               backgroundImage={Cutout}
               backgroundPosition={{xs: 'center bottom', md: 'right center'}}
+              px={{xs: 0.25}}
             />
           </Grid>
           <Grid item p={0}>
@@ -59,6 +60,7 @@ export default function HomePage() {
               direction='row-reverse'
               py={5}
               maxWidth={'xl'}
+              px={{xs: 0.25}}
             />
           </Grid>
           <Grid item>

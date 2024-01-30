@@ -25,7 +25,7 @@ export default function ApartmentsPage() {
               subtitleVariant='h5'
               details={introDetails}
               maxWidth={'xl'}
-              sx={{ p: {xs:0, md: 8} }}
+              py={{xs:5, md: 8}}
             />
           </Grid>
           <Grid item p={0}>
