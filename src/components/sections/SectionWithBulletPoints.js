@@ -3,7 +3,7 @@ import * as React from 'react';
 import '../../style/components/sections/SectionWithBulletPoints.css';
 import BulletList from '../BulletList';
 import SectionWrapper from './SectionWrapper';
-export default function SectionWithBulletPoints({bulletList1, bulletList2, title, subtitle, decoration, details, backgroundColor, maxWidth, py}) {
+export default function SectionWithBulletPoints({bulletList1, bulletList2, title, subtitle, decoration, details, backgroundColor, maxWidth, py, keyWord}) {
 
   return (
     <SectionWrapper py={py} backgroundColor={backgroundColor}>
@@ -13,8 +13,8 @@ export default function SectionWithBulletPoints({bulletList1, bulletList2, title
             <Typography variant='h5' color='primary'>{title}</Typography>
           }
           <Box display='flex' flexDirection={{xs: 'column', md: 'row'}} mt={title ? 2 : 0}>
-            {bulletList1 && <BulletList bulletTextArray={bulletList1} spacing={1} marginRight={{xs: 0, md: 3}}/>}
-            {bulletList2 && <BulletList bulletTextArray={bulletList2} spacing={1}/>}
+            {bulletList1 && <BulletList bulletTextArray={bulletList1} keyWord={keyWord + '_left'} spacing={1} marginRight={{xs: 0, md: 3}}/>}
+            {bulletList2 && <BulletList bulletTextArray={bulletList2} keyWord={keyWord + '_right'} spacing={1}/>}
           </Box>
           
         </Box>

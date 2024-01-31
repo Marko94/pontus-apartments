@@ -32,10 +32,10 @@ export default function ApartmentsPage() {
             <SectionWithIcons maxWidth={'xl'}/>
           </Grid>
           <Grid item p={0}>
-            <SectionWithBulletPoints maxWidth={'xl'} bulletList1={introBulletList1} bulletList2={introBulletList2}/>
+            <SectionWithBulletPoints maxWidth={'xl'} bulletList1={introBulletList1} bulletList2={introBulletList2} keyWord='apartment-description'/>
           </Grid>
           {apartments && apartments.map((apartment, index) => 
-            <Grid item p={0}>
+            <Grid item key={apartment.name} p={0}>
               <SectionWithApartmentDetails
                 photos={apartment.photos}
                 alt={apartment.name}

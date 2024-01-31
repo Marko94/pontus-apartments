@@ -46,7 +46,7 @@ export default function HamburgerMenu({backgroundColor}) {
         </Box>
         <Divider/>
         {pages.map((page) => (
-          <Box height={48} width='100%' display='flex' alignItems='center' justifyContent='start' p={0} borderBottom='1px solid rgba(0, 0, 0, 0.12)' bgcolor='secondary.extraLight'>
+          <Box key={page} height={48} width='100%' display='flex' alignItems='center' justifyContent='start' p={0} borderBottom='1px solid rgba(0, 0, 0, 0.12)' bgcolor='secondary.extraLight'>
             <Link to={page === pages[0] ? "/" : page.toLocaleLowerCase()} onClick={changeDrawerOpened(false)} style={linkStyle}>
               <MenuItem key={page} style={linkStyle}>{page}</MenuItem>
             </Link>
