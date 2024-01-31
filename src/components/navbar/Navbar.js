@@ -16,17 +16,17 @@ export default function Navbar() {
       <AppBar variant="sticky" color="transparent" className="Nav-bar" sx={{boxShadow: "none"}}>
         <Toolbar>
           <Grid container spacing={2} alignItems='center' className='Nav-bar-grid-container'>
-            <Grid item xs={2}>
-              <Hidden lgDown>
+            <Hidden lgDown>
+              <Grid item xs={0} lg={3} xl={2}>
                 <PhoneInfoPanel/>
-              </Hidden>
-            </Grid>
-            <Grid item xs={8} display="flex" alignItems="center" justifyContent="center" sx={{ flexGrow: 1 }}>
-              <Typography variant="h4" component="div">
+              </Grid>
+            </Hidden>
+            <Grid item xs={9} lg={6} xl={8} display="flex" alignItems="center" sx={{ flexGrow: 1, justifyContent: {xs: 'left', lg: 'center'} }}>
+              <Typography variant="h4" component="div" sx={{fontSize: {xs: "20px", sm: "24px", md: "34px"}}}>
                 Pontus Luxury Apartments
               </Typography>
             </Grid>
-            <Grid item xs={2} display="flex" alignItems="center" justifyContent="end">
+            <Grid item xs={3} xl={2} display="flex" alignItems="center" justifyContent="end">
               <HamburgerMenu backgroundColor={isScrolled ? 'none' : 'secondary.main'}/>
             </Grid>
           </Grid>
