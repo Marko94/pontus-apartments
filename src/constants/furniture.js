@@ -1,0 +1,33 @@
+import BedOutlinedIcon from '@mui/icons-material/BedOutlined';
+import ChairOutlinedIcon from '@mui/icons-material/ChairOutlined';
+import SingleBedOutlinedIcon from '@mui/icons-material/SingleBedOutlined';
+
+export const BedTypeName = {
+  double: 'double',
+  single: 'single',
+  sofa: 'sofa'
+}
+
+export const doubleBed = {
+  name: BedTypeName.double,
+  icon: <BedOutlinedIcon/>,
+  title: 'double bed'
+}
+
+export const singleBed = {
+  name: BedTypeName.single,
+  icon: <SingleBedOutlinedIcon/>,
+  title: 'signle bed'
+}
+
+export const sofa = {
+  name: BedTypeName.sofa,
+  icon: <ChairOutlinedIcon/>,
+  title: 'sofa'
+}
+
+export const BedTypes = {
+  doubleBed: doubleBed,
+  singleBed: singleBed,
+  sofa: sofa
+};

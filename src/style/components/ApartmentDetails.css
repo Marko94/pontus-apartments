@@ -1,0 +1,19 @@
+.Apartment-details-container {
+
+  .Icon-container {
+    color: var(--secondary);
+  }
+
+  .Subtitle {
+    svg {
+      margin-bottom: -6px;
+    }
+  }
+  
+  .Description {
+    svg {
+      font-size: 14pt;
+      margin-bottom: -1px;
+    }
+  }
+}

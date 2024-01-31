@@ -1,0 +1,9 @@
+.Icon-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  &.Vertical {
+    flex-direction: row;
+  }
+}

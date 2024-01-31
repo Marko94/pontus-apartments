@@ -110,7 +110,7 @@ export const photosGalery = [
   },
 ];
 
-export const apartmentOne = [
+export const blu = [
   {
     original: blue1
   },
@@ -128,7 +128,7 @@ export const apartmentOne = [
   }
 ];
 
-export const apartmentTwo = [
+export const madera = [
   {
     original: brown1
   },
@@ -146,7 +146,7 @@ export const apartmentTwo = [
   }
 ];
 
-export const apartmentThree = [
+export const kakhi = [
   {
     original: cream1
   },
@@ -164,7 +164,7 @@ export const apartmentThree = [
   }
 ];
 
-export const apartmentFour = [
+export const verde = [
   {
     original: darkGreen1
   },
@@ -182,7 +182,7 @@ export const apartmentFour = [
   }
 ];
 
-export const apartmentFive = [
+export const rustica = [
   {
     original: green1
   },
@@ -197,7 +197,7 @@ export const apartmentFive = [
   }
 ];
 
-export const apartmentSix = [
+export const bianco = [
   {
     original: lightPurple1
   },
@@ -215,7 +215,7 @@ export const apartmentSix = [
   }
 ];
 
-export const apartmentSeven = [
+export const marrone = [
   {
     original: orange1
   },
@@ -230,7 +230,7 @@ export const apartmentSeven = [
   }
 ];
 
-export const apartmentEight = [
+export const grigio = [
   {
     original: purple1
   },
@@ -245,7 +245,7 @@ export const apartmentEight = [
   }
 ];
 
-export const apartmentNine = [
+export const bordo = [
   {
     original: red1
   },
@@ -260,7 +260,7 @@ export const apartmentNine = [
   }
 ];
 
-export const apartmentTen = [
+export const rio = [
   {
     original: teal1
   },
@@ -272,7 +272,7 @@ export const apartmentTen = [
   }
 ];
 
-export const apartmentEleven = [
+export const oro = [
   {
     original: yellow1
   },
