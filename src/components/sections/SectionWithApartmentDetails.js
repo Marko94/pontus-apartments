@@ -46,7 +46,7 @@ export default function SectionWithApartmentDetails({
     <SectionWrapper>
       <Box className='Section-with-carousel-container Section' style={{backgroundColor: backgroundColor}}>
         <Grid container direction={{xs: 'column-reverse', md: direction || 'row'}} maxWidth={maxWidth} className='Section-with-carousel-content' sx={{py: spacing}}>
-          <Grid item xs={12} md={6} display='flex' alignItems='center' className='Carousel-container'>
+          <Grid item xs={12} md={6} display='flex' alignItems='center' borderRadius={{xs: 0, md: 4}} className='Carousel-container'>
             <ReactImageGallery
               items={photos}
               lazyLoad={true}
