@@ -10,12 +10,18 @@ export default function InfoPanel({fontSize, iconSize}) {
       <Typography variant="p1" component="div" display="flex" alignItems="center" fontSize={fontSize}>
         <PhoneEnabledIcon fontSize={iconSize}/>
         <Box display="flex" flexDirection="column" sx={{ ml:1 }}>
-          <Link href="tel:+38269466754" flex color="inherit">
-            +382 69 466 754
-          </Link>
-          <Link href="tel:+38269033039" flex color="inherit">
-            +382 69 033 039
-          </Link>
+          <Box display="flex" flexDirection="row" gap={'0 8px'}>
+            <Link href="tel:+38269466754" flex color="inherit">
+              +382 69 466 754
+            </Link>
+            <Typography>{"(Pavle)"}</Typography>
+          </Box>
+          <Box display="flex" flexDirection="row" gap={'0 8px'}>
+            <Link href="tel:+38269033039" flex color="inherit">
+              +382 69 033 039
+            </Link>
+            <Typography>{"(Jasna)"}</Typography>
+          </Box>
         </Box>
       </Typography>
     </React.Fragment>
