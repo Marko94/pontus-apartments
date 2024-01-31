@@ -47,7 +47,6 @@ export default function ApartmentDetails({
   spacing=0,
   width
 }) {
-  console.log(BedTypes);
   return (   
     <Grid container direction='column' alignItems='center' spacing={spacing} width={width} className='Apartment-details-container'>
       <Grid item display='flex' alignItems='center'>
