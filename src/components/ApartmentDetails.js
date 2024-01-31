@@ -53,7 +53,7 @@ export default function ApartmentDetails({
       <Grid item display='flex' alignItems='center'>
         <Typography variant={titleVariant} color='primary'>{title}</Typography>
       </Grid>
-      <Grid item display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' gap={1} className='Subtitle' pb={1} borderBottom='1px solid lightgrey'>
+      <Grid item display='flex' flexDirection='row' flexWrap='wrap' alignItems='center' justifyContent='center' gap={1} className='Subtitle' pb={1} borderBottom='1px solid lightgrey'>
         <IconBox icon={<StairsOutlinedIcon/>} titleVariant='h7' title={floor} horizontal={true}/>
         {doubleBeds > 0 && <IconBox icon={BedTypes.doubleBed.icon} titleVariant='h7' title={`${doubleBeds} ${BedTypes.doubleBed.title}${doubleBeds > 1 ? 's' : ''}`} horizontal={true}/>}
         {singleBeds > 0 && <IconBox icon={BedTypes.singleBed.icon} titleVariant='h7' title={`${singleBeds} ${BedTypes.singleBed.title}${singleBeds > 1 ? 's' : ''}`} horizontal={true}/>}
