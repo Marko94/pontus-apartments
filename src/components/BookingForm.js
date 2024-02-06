@@ -5,7 +5,7 @@ import { apartments } from '../constants/apartments';
 import emailjs from '@emailjs/browser';
 import dayjs from 'dayjs';
 import * as React from 'react';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useLayoutEffect } from 'react';
 import '../style/components/BookingForm.css';
 
 export default function BookingForm({spacing, width}) {
@@ -13,9 +13,16 @@ export default function BookingForm({spacing, width}) {
   const [ endDate, setEndDate ] = useState(dayjs(startDate.add(1, 'day')));
   const [ selectedApartment, setSelectedApartment ] = useState('Bilo Koji');
   const [ name, setName ] = useState('');
+  const [ email, setEmail ] = useState('');
+  const [isInvalidName, setIsInvalidName] = useState(false);
+  const [isInvalidEmail, setIsInvalidEmail] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   
   const handleSetName = (event) => {
-    setName(event.target.value.trim());
+    setName(event.target.value);
+  };
+  const handleSetEmail = (event) => {
+    setEmail(event.target.value.trim());
   };
 
   const handleStartDateChange = useCallback((newStartDate) => {
@@ -34,6 +41,20 @@ export default function BookingForm({spacing, width}) {
     emailjs.sendForm(process.env.REACT_APP_EMAIL_SERVICE_ID, process.env.REACT_APP_EMAIL_TEMPLATE_ID, event.target, process.env.REACT_APP_EMAIL_PUBLIC_KEY).then().catch();
   }
 
+  useLayoutEffect(() => {
+    const isValidName = !!name.match(/^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$/);
+    const isValidEmail = !!email.match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+    setIsInvalidName(!isValidName);
+    setIsInvalidEmail(!isValidEmail);
+  }, [name, email]);
+
+  useLayoutEffect(() => {
+    const isButtonDisabled = name === '' || email === '' || isInvalidName || isInvalidEmail
+    setIsButtonDisabled(isButtonDisabled);
+  }, [isInvalidName, isInvalidEmail]);
+
   return (
     <Box component='form' className='Booking-form' onSubmit={handleSubmit}>
       <Grid container direction='column' spacing={spacing} width={width}> 
@@ -41,7 +62,7 @@ export default function BookingForm({spacing, width}) {
           <TextField
             required
             fullWidth
-            error={name === ''}
+            error={isInvalidName}
             id="name"
             name='name'
             label="Full name"
@@ -53,11 +74,14 @@ export default function BookingForm({spacing, width}) {
         <Grid item display='flex' alignItems='center'>
           <TextField
             required
+            error={isInvalidEmail}
             fullWidth
             id="email"
             name='mail'
             label="Email"
             placeholder="Email address"
+            onChange={handleSetEmail}
+            value={email}
           />
         </Grid>
         <Grid item display='flex' alignItems='flex-start' gap={'0 12px'}>
@@ -93,7 +117,7 @@ export default function BookingForm({spacing, width}) {
           />
         </Grid>
         <Grid item display='flex' justifyContent='flex-end'>
-          <Button type='submit' variant='contained' color='secondary' disableElevation endIcon={<SendIcon/>}>Send Request</Button>
+          <Button type='submit' variant='contained' color='secondary' disableElevation endIcon={<SendIcon/>} disabled={isButtonDisabled}>Send Request</Button>
         </Grid>
       </Grid>
     </Box>
