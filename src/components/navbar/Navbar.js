@@ -1,11 +1,11 @@
+import { Grid, Hidden } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
 import { useState } from 'react';
+import '../../style/components/Navbar.css';
 import PhoneInfoPanel from '../PhoneInfoPanel';
-import { Grid, Hidden } from '@mui/material';
-import '../../style/components/Navbar.css'
 import HamburgerMenu from './HamburgerMenu';
 import NavbarScrollHandler from './NavbarScrollHandler';
 

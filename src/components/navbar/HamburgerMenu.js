@@ -4,6 +4,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import pages from '../../constants/pages';
 import BookNowButton from '../BookNowButton';
+import LanguageMenu from './LanguageMenu';
 
 const linkStyle = {
   fontSize: '14pt',
@@ -41,8 +42,11 @@ export default function HamburgerMenu({backgroundColor}) {
         PaperProps={{sx: {width: {xs: '75%', md: 480}}}}
         disableSwipeToOpen
       >
-        <Box width='100%' height={95} bgcolor='primary.dark' display='flex' justifyContent='center' alignItems='center'>
+        <Box width='100%' height={95} bgcolor='primary.dark' display='flex' justifyContent='center' alignItems='center' position='relative'>
           <BookNowButton/>
+          <Box position='absolute' right={12}>
+            <LanguageMenu/>
+          </Box>
         </Box>
         <Divider/>
         {pages.map((page) => (
