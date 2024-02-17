@@ -13,7 +13,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(true);
   return (
     <NavbarScrollHandler setIsScrolled={setIsScrolled}>
-      <AppBar variant="sticky" color="transparent" className="Nav-bar" sx={{boxShadow: "none"}}>
+      <AppBar variant="sticky" className="Nav-bar" sx={{boxShadow: "none"}}>
         <Toolbar>
           <Grid container spacing={2} alignItems='center' className='Nav-bar-grid-container'>
             <Hidden lgDown>
