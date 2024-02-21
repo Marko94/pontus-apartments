@@ -1,4 +1,4 @@
-import { grigio as grigioPhotos, oro as oroPhotos, rustica as rusticaPhotos, verde as verdePhotos, bordo as bordoPhotos, blu as bluPhotos, marrone as marronePhotos, bianco as biancoPhotos, rio as rioPhotos, kakhi as kakhiPhotos, madera as maderaPhotos } from "../constants/photos.js";
+import { grigio as grigioPhotos, oro as oroPhotos, rustica as rusticaPhotos, verde as verdePhotos, bordo as bordoPhotos, blu as bluPhotos, marrone as marronePhotos, bianco as biancoPhotos, rio as rioPhotos, cachi as cachiPhotos, madera as maderaPhotos } from "../constants/photos.js";
 
 const commonAppartmentItems = {
   seaView: true,
@@ -73,8 +73,8 @@ const blu = {
   ...commonAppartmentItems
 }
 
-const kakhi = {
-  name: 'Kakhi',
+const cachi = {
+  name: 'Cachi',
   floor: 'Second floor',
   balcony: true,
   privateTerrace: false,
@@ -83,7 +83,7 @@ const kakhi = {
   singleBeds: 0,
   sofas: 1,
   notes: null,
-  photos: kakhiPhotos,
+  photos: cachiPhotos,
   disabledAccess: false,
   ...commonAppartmentItems
 }
@@ -178,4 +178,4 @@ const oro = {
   ...commonAppartmentItems
 }
 
-export const apartments = [blu, madera, kakhi, verde, rustica, bianco, marrone, grigio, bordo, rio, oro];
+export const apartments = [blu, madera, cachi, verde, rustica, bianco, marrone, grigio, bordo, rio, oro];

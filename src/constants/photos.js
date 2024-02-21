@@ -146,7 +146,7 @@ export const madera = [
   }
 ];
 
-export const kakhi = [
+export const cachi = [
   {
     original: cream1
   },
