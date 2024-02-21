@@ -84,10 +84,10 @@ export default function BookingForm({spacing, width}) {
             value={email}
           />
         </Grid>
-        <Grid item display='flex' alignItems='flex-start' gap={'0 12px'}>
-          <DatePicker label='Check in date' name='CIDate' value={startDate} disablePast={true} format='DD.MM.YYYY.' onChange={handleStartDateChange} sx={{flexGrow: 1}}/>
-          <DatePicker label='Check out date' name='CODate' value={endDate} minDate={startDate.add(1, 'day')} disablePast={true}  format='DD.MM.YYYY.' sx={{flexGrow: 1}}/>
-          <FormControl sx={{flexGrow: 1}}>
+        <Grid item display='flex' alignItems='flex-start' flexDirection={{xs: 'column', sm: 'row'}} gap={{xs: '12px 0', sm: '0 12px'}}>
+          <DatePicker label='Check in date' name='CIDate' value={startDate} disablePast={true} format='DD.MM.YYYY.' onChange={handleStartDateChange} sx={{width: '100%'}}/>
+          <DatePicker label='Check out date' name='CODate' value={endDate} minDate={startDate.add(1, 'day')} disablePast={true}  format='DD.MM.YYYY.' sx={{width: '100%'}}/>
+          <FormControl sx={{width: '100%'}}>
             <InputLabel id="select-label">Apartment</InputLabel>
             <Select
               id="demo-simple-select"
@@ -111,7 +111,7 @@ export default function BookingForm({spacing, width}) {
                   }
                 }
               }}
-            > 
+            >
               <MenuItem key='any' value='Any'>Any</MenuItem>
               {apartments.map(apartment => 
                 <MenuItem key={apartment.name} value={apartment.name}>{apartment.name}</MenuItem>
