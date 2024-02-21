@@ -11,13 +11,13 @@ import '../style/components/BookingForm.css';
 export default function BookingForm({spacing, width}) {
   const [ startDate, setStartDate ] = useState(dayjs());
   const [ endDate, setEndDate ] = useState(dayjs(startDate.add(1, 'day')));
-  const [ selectedApartment, setSelectedApartment ] = useState('Bilo Koji');
+  const [ selectedApartment, setSelectedApartment ] = useState('Any');
   const [ name, setName ] = useState('');
   const [ email, setEmail ] = useState('');
   const [isInvalidName, setIsInvalidName] = useState(false);
   const [isInvalidEmail, setIsInvalidEmail] = useState(false);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  
+
   const handleSetName = (event) => {
     setName(event.target.value);
   };
@@ -42,7 +42,7 @@ export default function BookingForm({spacing, width}) {
   }
 
   useLayoutEffect(() => {
-    const isValidName = !!name.match(/^\s*([A-Za-z]{1,}([\.,] |[-']| ))+[A-Za-z]+\.?\s*$/);
+    const isValidName = !!name.match(/^\s*([A-Za-z]{1,}([.,] |[-']| ))+[A-Za-z]+\.?\s*$/);
     const isValidEmail = !!email.match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
@@ -53,7 +53,7 @@ export default function BookingForm({spacing, width}) {
   useLayoutEffect(() => {
     const isButtonDisabled = name === '' || email === '' || isInvalidName || isInvalidEmail
     setIsButtonDisabled(isButtonDisabled);
-  }, [isInvalidName, isInvalidEmail]);
+  }, [isInvalidName, isInvalidEmail, email, name]);
 
   return (
     <Box component='form' className='Booking-form' onSubmit={handleSubmit}>
@@ -96,8 +96,23 @@ export default function BookingForm({spacing, width}) {
               value={selectedApartment}
               label='Apartment'
               onChange={handleApartmentChange}
-            >
-              <MenuItem key='any' value='Bilo Koji'>Any</MenuItem>
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              MenuProps={{
+                PaperProps: { 
+                  style: { 
+                    height: '280px'
+                  }
+                }
+              }}
+            > 
+              <MenuItem key='any' value='Any'>Any</MenuItem>
               {apartments.map(apartment => 
                 <MenuItem key={apartment.name} value={apartment.name}>{apartment.name}</MenuItem>
               )}
