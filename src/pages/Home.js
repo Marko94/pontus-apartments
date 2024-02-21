@@ -1,18 +1,76 @@
 import { Box, Grid } from '@mui/material';
 import * as React from 'react';
+import { useLayoutEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import CoverPhoto from '../assets/Cover.jpg';
 import ApartmentPhoto from '../assets/apartments/apartment 2/Brown 1.jpg';
 import Cutout from '../assets/decorations/House cutout.png';
 import Squigle from '../assets/decorations/Squigle.png';
 import PoolPhoto from '../assets/gallery/Gallery 1.jpg';
-import { apartmentsDetails, apartmentsSubtitle, apartmentsTitle, introDetails, introTitle, policiesDetails, policiesSubtitle, policiesTitle } from '../assets/languages/english/Home page conent';
+import { apartmentsDetails, apartmentsSubtitle, apartmentsTitle, introDetails, introTitle, policiesDetails, policiesSubtitle, policiesTitle, viewApartmentsButton, viewPoliciesButton } from '../assets/languages/english/Home page conent';
 import Page from '../components/Page';
 import SectionWithGallery from '../components/sections/SectionWithGallery';
 import SectionWithImage from '../components/sections/SectionWithImage';
 import SectionWithText from '../components/sections/SectionWithText';
 import '../style/pages/Home.css';
+import { apartmentsDetailsMNE, apartmentsSubtitleMNE, apartmentsTitleMNE, introDetailsMNE, introTitleMNE, policiesDetailsMNE, policiesSubtitleMNE, policiesTitleMNE, viewApartmentsButtonMNE, viewPoliciesButtonMNE } from '../assets/languages/montenegrian/Home page conent';
 
 export default function HomePage() {
+  const [searchParams,] = useSearchParams();
+  const [selectedLanguage, setSelectedLanguage] = useState(() => 
+  searchParams && searchParams.get('lang') === 'MNE' ? 
+    {
+      apartmentsDetails: apartmentsDetailsMNE,
+      apartmentsSubtitle: apartmentsSubtitleMNE,
+      apartmentsTitle: apartmentsTitleMNE,
+      introDetails: introDetailsMNE,
+      introTitle: introTitleMNE,
+      policiesDetails: policiesDetailsMNE,
+      policiesSubtitle: policiesSubtitleMNE,
+      policiesTitle: policiesTitleMNE,
+      viewApartmentsButton: viewApartmentsButtonMNE,
+      viewPoliciesButton: viewPoliciesButtonMNE
+    } : {
+      apartmentsDetails,
+      apartmentsSubtitle,
+      apartmentsTitle,
+      introDetails,
+      introTitle,
+      policiesDetails,
+      policiesSubtitle,
+      policiesTitle,
+      viewApartmentsButton,
+      viewPoliciesButton
+    }
+  ); 
+
+  useLayoutEffect(() => {
+    setSelectedLanguage(searchParams && searchParams.get('lang') === 'MNE' ? 
+    {
+      apartmentsDetails: apartmentsDetailsMNE,
+      apartmentsSubtitle: apartmentsSubtitleMNE,
+      apartmentsTitle: apartmentsTitleMNE,
+      introDetails: introDetailsMNE,
+      introTitle: introTitleMNE,
+      policiesDetails: policiesDetailsMNE,
+      policiesSubtitle: policiesSubtitleMNE,
+      policiesTitle: policiesTitleMNE,
+      viewApartmentsButton: viewApartmentsButtonMNE,
+      viewPoliciesButton: viewPoliciesButtonMNE
+    } : {
+      apartmentsDetails,
+      apartmentsSubtitle,
+      apartmentsTitle,
+      introDetails,
+      introTitle,
+      policiesDetails,
+      policiesSubtitle,
+      policiesTitle,
+      viewApartmentsButton,
+      viewPoliciesButton
+    });
+  }, [searchParams]);
+
   return (
     <Page>
       <Box className='Home-page-container' flex>
@@ -20,10 +78,10 @@ export default function HomePage() {
         <Grid container direction='column' spacing={0} className='Home-content'>
           <Grid item p={0}>
             <SectionWithText
-              title={introTitle}
+              title={selectedLanguage.introTitle}
               titleVariant='h4'
               decoration={Squigle}
-              details={introDetails}
+              details={selectedLanguage.introDetails}
               showBookNowButton={true}
               py={10}
               maxWidth={'xl'}
@@ -33,12 +91,12 @@ export default function HomePage() {
             <SectionWithImage
               src={ApartmentPhoto}
               alt="test"
-              title={apartmentsTitle}
+              title={selectedLanguage.apartmentsTitle}
               titleVariant='h4'
-              subtitle={apartmentsSubtitle}
+              subtitle={selectedLanguage.apartmentsSubtitle}
               href={'/apartments'}
-              details={apartmentsDetails}
-              buttonText='View Apartments'
+              details={selectedLanguage.apartmentsDetails}
+              buttonText={selectedLanguage.viewApartmentsButton}
               direction='row'
               maxWidth={'xl'}
               py={5}
@@ -51,12 +109,12 @@ export default function HomePage() {
           <Grid item p={0}>
             <SectionWithImage
               src={PoolPhoto}
-              title={policiesTitle}
+              title={selectedLanguage.policiesTitle}
               titleVariant='h4'
-              subtitle={policiesSubtitle}
+              subtitle={selectedLanguage.policiesSubtitle}
               href={'/policies'}
-              details={policiesDetails}
-              buttonText='View policies'
+              details={selectedLanguage.policiesDetails}
+              buttonText={selectedLanguage.viewPoliciesButton}
               direction='row-reverse'
               py={5}
               maxWidth={'xl'}

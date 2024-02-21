@@ -9,3 +9,6 @@ export const apartmentsDetails = 'All apartments have kitchens and come equipped
 export const policiesTitle = 'Policies and other information';
 export const policiesSubtitle = 'Get familiar with our policies and additional useful information';
 export const policiesDetails = 'If you have any uncertainties about your stay with us, feel free to take a look at our policies to find out more. We tried to list everything important to make your booking a hassle free experience!';
+
+export const viewApartmentsButton = 'View Apartments';
+export const viewPoliciesButton = 'View Policies';
