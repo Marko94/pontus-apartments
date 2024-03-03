@@ -2,7 +2,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Box, Divider, IconButton, MenuItem, SwipeableDrawer } from "@mui/material";
 import * as React from 'react';
 import { useLayoutEffect, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams, useLocation } from 'react-router-dom';
 import { pages, pagesMNE } from '../../constants/pages';
 import BookNowButton from '../BookNowButton';
 import LanguageMenu from './LanguageMenu';
@@ -17,6 +17,7 @@ const linkStyle = {
 
 export default function HamburgerMenu({backgroundColor}) {
   const [isDrawerOpened, setIsDrawerOpened] = React.useState(false);
+  const { search } = useLocation();
   const [searchParams,] = useSearchParams();
   const [pageLabels, setPageLabels] = useState(() => 
   searchParams && searchParams.get('lang') === 'MNE' ?
@@ -68,7 +69,7 @@ export default function HamburgerMenu({backgroundColor}) {
         <Divider/>
         {pages.map((page, index) => (
           <Box key={page} height={48} width='100%' display='flex' alignItems='center' justifyContent='start' p={0} borderBottom='1px solid rgba(0, 0, 0, 0.12)' bgcolor='secondary.extraLight'>
-            <Link to={page === pages[0] ? "/" : page.toLocaleLowerCase()} onClick={changeDrawerOpened(false)} style={linkStyle}>
+            <Link to={`${page === pages[0] ? "/" : page.toLocaleLowerCase()}${search}`} onClick={changeDrawerOpened(false)} style={linkStyle}>
               <MenuItem key={page} style={linkStyle}>{pageLabels[index]}</MenuItem>
             </Link>
           </Box>
