@@ -1,7 +1,7 @@
 import { Box, Grid } from '@mui/material';
 import * as React from 'react';
 import { useLayoutEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import CoverPhoto from '../assets/Cover.jpg';
 import ApartmentPhoto from '../assets/apartments/apartment 2/Brown 1.jpg';
 import Cutout from '../assets/decorations/House cutout.png';
@@ -17,6 +17,7 @@ import { apartmentsDetailsMNE, apartmentsSubtitleMNE, apartmentsTitleMNE, introD
 
 export default function HomePage() {
   const [searchParams,] = useSearchParams();
+  const {search} = useLocation();
   const [pageText, setPageText] = useState(() => 
   searchParams && searchParams.get('lang') === 'MNE' ? 
     {
@@ -94,7 +95,7 @@ export default function HomePage() {
               title={pageText.apartmentsTitle}
               titleVariant='h4'
               subtitle={pageText.apartmentsSubtitle}
-              href={'/apartments'}
+              href={`/apartments${search}`}
               details={pageText.apartmentsDetails}
               buttonText={pageText.viewApartmentsButton}
               direction='row'
@@ -112,7 +113,7 @@ export default function HomePage() {
               title={pageText.policiesTitle}
               titleVariant='h4'
               subtitle={pageText.policiesSubtitle}
-              href={'/policies'}
+              href={`/policies${search}`}
               details={pageText.policiesDetails}
               buttonText={pageText.viewPoliciesButton}
               direction='row-reverse'

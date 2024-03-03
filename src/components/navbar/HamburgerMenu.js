@@ -17,7 +17,7 @@ const linkStyle = {
 
 export default function HamburgerMenu({backgroundColor}) {
   const [isDrawerOpened, setIsDrawerOpened] = React.useState(false);
-  const { search } = useLocation();
+  const {search} = useLocation();
   const [searchParams,] = useSearchParams();
   const [pageLabels, setPageLabels] = useState(() => 
   searchParams && searchParams.get('lang') === 'MNE' ?
