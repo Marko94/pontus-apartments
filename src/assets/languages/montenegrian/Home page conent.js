@@ -1,4 +1,4 @@
-export const introTitleMNE = 'Dobro došli, uživajte u crnogorskoj ljepoti Bokokotorskog zaliva!';
+export const introTitleMNE = 'Dobrodošli, uživajte u crnogorskoj ljepoti Bokokotorskog zaliva!';
 export const introSubtitleMNE = 'Luksuzni apartmani Pontus nalaze se u Tivtu i imaju plažu, privatni bazen, besplatan bežični internet, flat screen TV sa kablovskim kanalima, opremljene kuhinje, veš mašine i privatni parking.';
 export const introDetailsMNE = 'Luksuzni apartmani Pontus nalaze se nekoliko stotina metara od šetališta Pine, gdje se u produžetku nalazi luksuzna marina međunarodnog značaja. Pine je šetalište sa nekoliko restorana, barova, poslastičarnica i prodavnica u kojima se u toku ljeta održavaju razne kulturne/sportske manifestacije. U neposrednoj blizini zgrade se nalazi i mini-market, pekara, kao i restorani i barovi.\n\nApartmani se nalaze u Tivtu i imaju plažu, privatni bazen, besplatan bežični internet, flat screen TV sa kablovskim kanalima, opremljene kuhinje, veš mašine i privatni parking. Plaža Belani sa plažnim barom i restoranom udaljena je stotinak metara.';
 

@@ -17,7 +17,7 @@ import { apartmentsDetailsMNE, apartmentsSubtitleMNE, apartmentsTitleMNE, introD
 
 export default function HomePage() {
   const [searchParams,] = useSearchParams();
-  const [selectedLanguage, setSelectedLanguage] = useState(() => 
+  const [pageText, setPageText] = useState(() => 
   searchParams && searchParams.get('lang') === 'MNE' ? 
     {
       apartmentsDetails: apartmentsDetailsMNE,
@@ -45,7 +45,7 @@ export default function HomePage() {
   ); 
 
   useLayoutEffect(() => {
-    setSelectedLanguage(searchParams && searchParams.get('lang') === 'MNE' ? 
+    setPageText(searchParams && searchParams.get('lang') === 'MNE' ? 
     {
       apartmentsDetails: apartmentsDetailsMNE,
       apartmentsSubtitle: apartmentsSubtitleMNE,
@@ -78,10 +78,10 @@ export default function HomePage() {
         <Grid container direction='column' spacing={0} className='Home-content'>
           <Grid item p={0}>
             <SectionWithText
-              title={selectedLanguage.introTitle}
+              title={pageText.introTitle}
               titleVariant='h4'
               decoration={Squigle}
-              details={selectedLanguage.introDetails}
+              details={pageText.introDetails}
               showBookNowButton={true}
               py={10}
               maxWidth={'xl'}
@@ -91,12 +91,12 @@ export default function HomePage() {
             <SectionWithImage
               src={ApartmentPhoto}
               alt="test"
-              title={selectedLanguage.apartmentsTitle}
+              title={pageText.apartmentsTitle}
               titleVariant='h4'
-              subtitle={selectedLanguage.apartmentsSubtitle}
+              subtitle={pageText.apartmentsSubtitle}
               href={'/apartments'}
-              details={selectedLanguage.apartmentsDetails}
-              buttonText={selectedLanguage.viewApartmentsButton}
+              details={pageText.apartmentsDetails}
+              buttonText={pageText.viewApartmentsButton}
               direction='row'
               maxWidth={'xl'}
               py={5}
@@ -109,12 +109,12 @@ export default function HomePage() {
           <Grid item p={0}>
             <SectionWithImage
               src={PoolPhoto}
-              title={selectedLanguage.policiesTitle}
+              title={pageText.policiesTitle}
               titleVariant='h4'
-              subtitle={selectedLanguage.policiesSubtitle}
+              subtitle={pageText.policiesSubtitle}
               href={'/policies'}
-              details={selectedLanguage.policiesDetails}
-              buttonText={selectedLanguage.viewPoliciesButton}
+              details={pageText.policiesDetails}
+              buttonText={pageText.viewPoliciesButton}
               direction='row-reverse'
               py={5}
               maxWidth={'xl'}
