@@ -7,7 +7,7 @@ export const generalBulletList1MNE = ['Po dolasku je obavezno davanje lične kar
 export const generalBulletList2MNE = ['Peškiri su dostupni u apartmanima po dolasku', 'Dodatni peškiri su dostupni 24h na policama ispred apartmana', 'Kućni ljubimci nisu dozvoljeni', 'Ne serviramo hranu i piće', 'Bar nije dostupan u objektu', 'Roštilj nije dostupan u objektu', 'Smeće se može odlagati u zelene kante ispred glavne kapije, separatisanje smeća nije potrebno', 'Strujni utikači koriste 220V utičnicu u EU tipa', 'Izdajemo račune', 'Nekretnina je opremljena sistemom protivpožarne zaštite'];
 
 export const paymentTitleMNE = 'Informacije o plaćanju';
-export const paymentDetailsMNE = 'Plaćanje se vrši isključivo po dolasku, dok je depozit od 30% obavezan prije dolaska. Plaćanje je moguće samo gotovinom u eurima i obračunava se na osnovu broja noćenja. Bankomati se nalaze na više mjesta u gradu. Boravišna dozvola se dodatno plaća i mora se platiti u roku od 24 sata od trenutka dolaska.'
+export const paymentDetailsMNE = 'Plaćanje se vrši isključivo po dolasku, dok je depozit od 30% obavezan prije dolaska. Plaćanje je moguće samo gotovinom u eurima i obračunava se na osnovu broja noćenja. Bankomati se nalaze na više mijesta u gradu. Boravišna dozvola se dodatno plaća i mora se platiti u roku od 24 sata od trenutka dolaska.'
 
 export const poolTitleMNE = 'Plaža i bazen';
 export const poolBulletList1MNE = ['Ležaljke i suncobrani su dostupni na plaži bez doplate', 'Objekat ima sezonski otvoreni bazen sa slatkom vodom koja se ne zagrijeva', 'Zajednički toalet je dostupan u blizini bazena'];
