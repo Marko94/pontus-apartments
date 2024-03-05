@@ -3,11 +3,11 @@ import * as React from 'react';
 import '../../style/components/sections/SectionWithBulletPoints.css';
 import BulletList from '../BulletList';
 import SectionWrapper from './SectionWrapper';
-export default function SectionWithBulletPoints({bulletList1, bulletList2, title, subtitle, decoration, details, backgroundColor, maxWidth, py, keyWord}) {
+export default function SectionWithBulletPoints({bulletList1, bulletList2, title, subtitle, decoration, details, backgroundColor, maxWidth, py, pt, keyWord}) {
 
   return (
     <SectionWrapper py={py} backgroundColor={backgroundColor}>
-      <Box className='Section-with-bullet-points-container Section'>
+      <Box className='Section-with-bullet-points-container Section' pt={pt}>
         <Box className='Section-with-bullet-points-content' alignItems={bulletList1 && bulletList2 ? undefined : 'center'} maxWidth={maxWidth}>
           {title && 
             <Typography variant='h5' color='primary'>{title}</Typography>
