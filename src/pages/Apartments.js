@@ -75,28 +75,7 @@ export default function ApartmentsPage() {
           {apartments && apartments.map((apartment, index) => 
             <Grid item key={apartment.name} p={0}>
               <SectionWithApartmentDetails
-                photos={apartment.photos}
-                alt={apartment.name}
-                name={apartment.name}
-                note={apartment.note}
-                floor={apartment.floor}
-                doubleBeds={apartment.doubleBeds}
-                singleBeds={apartment.singleBeds}
-                sofas={apartment.sofas}
-                wifi={apartment.wifi}
-                privateBathroom={apartment.privateBathroom}
-                seaView={apartment.seaView}
-                airCondition={apartment.airCondition}
-                fullyEquippedKitchen={apartment.fullyEquippedKitchen}
-                fridge={apartment.fridge}
-                flatScreenTv={apartment.flatScreenTv}
-                washingMachine={apartment.washingMachine}
-                balcony={apartment.balcony}
-                privateTerrace={apartment.privateTerrace}
-                sharedTerrace={apartment.sharedTerrace}
-                disabledAccess={apartment.disabledAccess}
-                towels={apartment.towels}
-                iron={apartment.iron}
+                apartment={apartment}
                 direction={index % 2 === 0 ? 'row' : 'row-reverse'}
                 href={`/policies?apt=${index}`}
                 spacing={spacing}

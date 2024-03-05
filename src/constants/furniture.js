@@ -11,19 +11,28 @@ export const BedTypeName = {
 export const doubleBed = {
   name: BedTypeName.double,
   icon: <BedOutlinedIcon/>,
-  title: 'double bed'
+  title: 'double bed',
+  titleMultiple: 'double beds',
+  titleMNE: 'bračni krevet',
+  titleMultipleMNE: 'bračna kreveta'
 }
 
 export const singleBed = {
   name: BedTypeName.single,
   icon: <SingleBedOutlinedIcon/>,
-  title: 'signle bed'
+  title: 'single bed',
+  titleMultiple: 'single beds',
+  titleMNE: 'krevet za jednu osobu',
+  titleMultipleMNE: 'kreveta za jednu osobu'
 }
 
 export const sofa = {
   name: BedTypeName.sofa,
   icon: <ChairOutlinedIcon/>,
-  title: 'sofa'
+  title: 'sofa',
+  titleMultiple: 'sofas',
+  titleMNE: 'sofa',
+  titleMultipleMNE: 'sofe'
 }
 
 export const BedTypes = {

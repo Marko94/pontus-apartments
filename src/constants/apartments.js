@@ -1,3 +1,5 @@
+import { floors, notes } from "../assets/languages/english/Apartments.js";
+import { floorsMNE, notesMNE } from "../assets/languages/montenegrian/Apartments.js";
 import { grigio as grigioPhotos, oro as oroPhotos, rustica as rusticaPhotos, verde as verdePhotos, bordo as bordoPhotos, blu as bluPhotos, marrone as marronePhotos, bianco as biancoPhotos, rio as rioPhotos, cachi as cachiPhotos, madera as maderaPhotos } from "../constants/photos.js";
 
 const commonAppartmentItems = {
@@ -15,14 +17,16 @@ const commonAppartmentItems = {
 
 const madera = {
   name: 'Madera',
-  floor: 'Ground floor',
+  floor: floors.ground,
+  floorMNE: floorsMNE.ground,
   balcony: false,
   privateTerrace: true,
   sharedTerrace: false,
   doubleBeds: 1,
   singleBeds: 0,
   sofas: 1,
-  notes: '* Private terrace is equipped with beach chairs and a table.',
+  notes: notes.privateTerrace,
+  notesMNE: notesMNE.privateTerrace,
   photos: maderaPhotos,
   disabledAccess: true,
   ...commonAppartmentItems
@@ -30,14 +34,16 @@ const madera = {
 
 const rustica = {
   name: 'Rustica',
-  floor: 'Ground floor',
+  floor: floors.ground,
+  floorMNE: floorsMNE.ground,
   balcony: false,
   privateTerrace: false,
   sharedTerrace: true,
   doubleBeds: 1,
   singleBeds: 0,
   sofas: 1,
-  notes: '* Terrace is equipped with beach chairs and a table and it is shared with one more apartment.',
+  notes: notes.sharedTerrace,
+  notesMNE: notesMNE.sharedTerrace,
   photos: rusticaPhotos,
   disabledAccess: true,
   ...commonAppartmentItems
@@ -45,14 +51,16 @@ const rustica = {
 
 const rio = {
   name: 'Rio',
-  floor: 'Ground floor',
+  floor: floors.ground,
+  floorMNE: floorsMNE.ground,
   balcony: false,
   privateTerrace: false,
   sharedTerrace: true,
   doubleBeds: 1,
   singleBeds: 0,
   sofas: 1,
-  notes: '* Terrace is equipped with beach chairs and a table and it is shared with one more apartment.',
+  notes: notes.sharedTerrace,
+  notesMNE: notesMNE.sharedTerrace,
   photos: rioPhotos,
   disabledAccess: true,
   ...commonAppartmentItems
@@ -60,7 +68,8 @@ const rio = {
 
 const blu = {
   name: 'Blu',
-  floor: 'Second floor',
+  floor: floors.second,
+  floorMNE: floorsMNE.second,
   balcony: true,
   privateTerrace: false,
   sharedTerrace: false,
@@ -75,7 +84,8 @@ const blu = {
 
 const cachi = {
   name: 'Cachi',
-  floor: 'Second floor',
+  floor: floors.second,
+  floorMNE: floorsMNE.second,
   balcony: true,
   privateTerrace: false,
   sharedTerrace: false,
@@ -90,7 +100,8 @@ const cachi = {
 
 const verde = {
   name: 'Verde',
-  floor: 'Second floor',
+  floor: floors.second,
+  floorMNE: floorsMNE.second,
   balcony: true,
   privateTerrace: false,
   sharedTerrace: false,
@@ -105,7 +116,8 @@ const verde = {
 
 const grigio = {
   name: 'Grigio',
-  floor: 'Second floor',
+  floor: floors.second,
+  floorMNE: floorsMNE.second,
   balcony: true,
   privateTerrace: false,
   sharedTerrace: false,
@@ -120,7 +132,8 @@ const grigio = {
 
 const bianco = {
   name: 'Bianco',
-  floor: 'Third floor',
+  floor: floors.third,
+  floorMNE: floorsMNE.third,
   balcony: true,
   privateTerrace: false,
   sharedTerrace: false,
@@ -135,7 +148,8 @@ const bianco = {
 
 const marrone = {
   name: 'Marrone',
-  floor: 'Third floor',
+  floor: floors.third,
+  floorMNE: floorsMNE.third,
   balcony: true,
   privateTerrace: false,
   sharedTerrace: false,
@@ -150,7 +164,8 @@ const marrone = {
 
 const bordo = {
   name: 'Bordo',
-  floor: 'Third floor',
+  floor: floors.third,
+  floorMNE: floorsMNE.third,
   balcony: true,
   privateTerrace: false,
   sharedTerrace: false,
@@ -165,7 +180,8 @@ const bordo = {
 
 const oro = {
   name: 'Oro',
-  floor: 'Third floor',
+  floor: floors.third,
+  floorMNE: floorsMNE.third,
   balcony: true,
   privateTerrace: false,
   sharedTerrace: false,
