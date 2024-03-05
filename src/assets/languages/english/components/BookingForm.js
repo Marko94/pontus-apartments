@@ -1,0 +1,9 @@
+export const fullName = 'Full name';
+export const emailAddress = 'Email address';
+export const checkInDate = 'Check in date';
+export const checkOutDate = 'Check out date';
+export const apartment = 'Apartment';
+export const anyLabel = 'Any';
+export const apartmentHelperText = 'Select an apartment you wish to book';
+export const messageText = 'Message Text';
+export const sendRequestLabel = 'Send Request';

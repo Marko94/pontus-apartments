@@ -6,9 +6,63 @@ import emailjs from '@emailjs/browser';
 import dayjs from 'dayjs';
 import * as React from 'react';
 import { useCallback, useState, useLayoutEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import '../style/components/BookingForm.css';
+import { anyLabel, apartmentHelperText, apartment, checkInDate, checkOutDate, emailAddress, fullName, messageText, sendRequestLabel } from '../assets/languages/english/components/BookingForm';
+import { anyLabelMNE, apartmentHelperTextMNE, apartmentMNE, checkInDateMNE, checkOutDateMNE, emailAddressMNE, fullNameMNE, messageTextMNE, sendRequestLabelMNE } from '../assets/languages/montenegrian/components/BookingForm';
 
 export default function BookingForm({spacing, width}) {
+  const [searchParams,] = useSearchParams();
+  const [pageText, setPageText] = useState(() => 
+  searchParams && searchParams.get('lang') === 'MNE' ? 
+    {
+      fullName: fullNameMNE,
+      emailAddress: emailAddressMNE,
+      checkInDate: checkInDateMNE,
+      checkOutDate: checkOutDateMNE,
+      apartment: apartmentMNE,
+      anyLabel: anyLabelMNE,
+      apartmentHelperText: apartmentHelperTextMNE,
+      messageText: messageTextMNE,
+      sendRequestLabel: sendRequestLabelMNE,
+    } : {
+      fullName,
+      emailAddress,
+      checkInDate,
+      checkOutDate,
+      apartment,
+      anyLabel,
+      apartmentHelperText,
+      messageText,
+      sendRequestLabel,
+    }
+  );
+
+  useLayoutEffect(() => {
+    setPageText(searchParams && searchParams.get('lang') === 'MNE' ? 
+    {
+      fullName: fullNameMNE,
+      emailAddress: emailAddressMNE,
+      checkInDate: checkInDateMNE,
+      checkOutDate: checkOutDateMNE,
+      apartment: apartmentMNE,
+      anyLabel: anyLabelMNE,
+      apartmentHelperText: apartmentHelperTextMNE,
+      messageText: messageTextMNE,
+      sendRequestLabel: sendRequestLabelMNE,
+    } : {
+      fullName,
+      emailAddress,
+      checkInDate,
+      checkOutDate,
+      apartment,
+      anyLabel,
+      apartmentHelperText,
+      messageText,
+      sendRequestLabel,
+    });
+  }, [searchParams]);
+
   const [ startDate, setStartDate ] = useState(dayjs());
   const [ endDate, setEndDate ] = useState(dayjs(startDate.add(1, 'day')));
   const [ selectedApartment, setSelectedApartment ] = useState('Any');
@@ -65,8 +119,8 @@ export default function BookingForm({spacing, width}) {
             error={isInvalidName}
             id="name"
             name='name'
-            label="Full name"
-            placeholder="Full name"
+            label={pageText.fullName}
+            placeholder={pageText.fullName}
             onChange={handleSetName}
             value={name}
           />
@@ -79,22 +133,22 @@ export default function BookingForm({spacing, width}) {
             id="email"
             name='mail'
             label="Email"
-            placeholder="Email address"
+            placeholder={pageText.emailAddress}
             onChange={handleSetEmail}
             value={email}
           />
         </Grid>
         <Grid item display='flex' alignItems='flex-start' flexDirection={{xs: 'column', sm: 'row'}} gap={{xs: '12px 0', sm: '0 12px'}}>
-          <DatePicker label='Check in date' name='CIDate' value={startDate} disablePast={true} format='DD.MM.YYYY.' onChange={handleStartDateChange} sx={{width: '100%'}}/>
-          <DatePicker label='Check out date' name='CODate' value={endDate} minDate={startDate.add(1, 'day')} disablePast={true}  format='DD.MM.YYYY.' sx={{width: '100%'}}/>
+          <DatePicker label={pageText.checkInDate} name='CIDate' value={startDate} disablePast={true} format='DD.MM.YYYY.' onChange={handleStartDateChange} sx={{width: '100%'}}/>
+          <DatePicker label={pageText.checkOutDate} name='CODate' value={endDate} minDate={startDate.add(1, 'day')} disablePast={true}  format='DD.MM.YYYY.' sx={{width: '100%'}}/>
           <FormControl sx={{width: '100%'}}>
-            <InputLabel id="select-label">Apartment</InputLabel>
+            <InputLabel id="select-label">{pageText.apartment}</InputLabel>
             <Select
               id="demo-simple-select"
               labelId='select-label'
               name='apt'
               value={selectedApartment}
-              label='Apartment'
+              label={pageText.apartment}
               onChange={handleApartmentChange}
               anchorOrigin={{
                 vertical: 'bottom',
@@ -112,12 +166,12 @@ export default function BookingForm({spacing, width}) {
                 }
               }}
             >
-              <MenuItem key='any' value='Any'>Any</MenuItem>
+              <MenuItem key='any' value='Any'>{pageText.anyLabel}</MenuItem>
               {apartments.map(apartment => 
                 <MenuItem key={apartment.name} value={apartment.name}>{apartment.name}</MenuItem>
               )}
             </Select>
-            <FormHelperText>Select an apartment you wish to book</FormHelperText>
+            <FormHelperText>{pageText.apartmentHelperText}</FormHelperText>
           </FormControl>
         </Grid>
         <Grid item display='flex' alignItems='center'>
@@ -125,14 +179,13 @@ export default function BookingForm({spacing, width}) {
             fullWidth
             id="messageText"
             name='message'
-            label="Message Text"
+            label={pageText.messageText}
             multiline
             rows={4}
-            placeholder="Default Value"
           />
         </Grid>
         <Grid item display='flex' justifyContent='flex-end'>
-          <Button type='submit' variant='contained' color='secondary' disableElevation endIcon={<SendIcon/>} disabled={isButtonDisabled}>Send Request</Button>
+          <Button type='submit' variant='contained' color='secondary' disableElevation endIcon={<SendIcon/>} disabled={isButtonDisabled}>{pageText.sendRequestLabel}</Button>
         </Grid>
       </Grid>
     </Box>
