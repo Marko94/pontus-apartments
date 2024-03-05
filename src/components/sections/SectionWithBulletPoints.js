@@ -16,7 +16,6 @@ export default function SectionWithBulletPoints({bulletList1, bulletList2, title
             {bulletList1 && <BulletList bulletTextArray={bulletList1} keyWord={keyWord + '_left'} spacing={1} marginRight={{xs: 0, md: 3}}/>}
             {bulletList2 && <BulletList bulletTextArray={bulletList2} keyWord={keyWord + '_right'} spacing={1}/>}
           </Box>
-          
         </Box>
       </Box>
     </SectionWrapper>

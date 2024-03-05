@@ -43,7 +43,7 @@ export default function HomePage() {
       viewApartmentsButton,
       viewPoliciesButton
     }
-  ); 
+  );
 
   useLayoutEffect(() => {
     setPageText(searchParams && searchParams.get('lang') === 'MNE' ? 
