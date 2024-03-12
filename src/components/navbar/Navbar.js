@@ -1,4 +1,4 @@
-import { Box, Grid, Hidden } from '@mui/material';
+import { Box, Grid, Hidden, Typography } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import * as React from 'react';
@@ -25,6 +25,9 @@ export default function Navbar() {
               <Box bgcolor={isScrolled ? "#1c2a3eF6" : 'transparent'} borderRadius={50} height='64px' width='64px' display='flex' sx={{transition: '0.5s background-color ease'}}>
                 <img src={logo} alt='logo' sx={{objectFit: 'contain'}}/>
               </Box>
+              <Typography variant="h4" component="div" sx={{fontSize: {xs: "18px", sm: "20px", md: "24px"}, whiteSpace: 'pre-wrap', textAlign: 'left', ml: '8px'}}>
+                {'Pontus Luxury\nApartments'}
+              </Typography>
             </Grid>
             <Grid item xs={3} xl={2} display="flex" alignItems="center" justifyContent="end">
               <HamburgerMenu backgroundColor={isScrolled ? 'none' : 'secondary.main'}/>
