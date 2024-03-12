@@ -54,7 +54,7 @@ export default function ApartmentsPage() {
   return (
     <Page>
       <Box className='Apartments-page-container'>
-        <img src={CoverPhoto} className="Cover-image" alt="Cover" />
+        <Box component="img" src={CoverPhoto} className="Cover-image" alt="Cover" sx={{minHeight: {xs: '300px', md: '200px'}}}/>
         <Grid container direction='column' spacing={{xs: 0, md:4}} className='Apartments-content'>
           <Grid item p={0}>
             <SectionWithText

@@ -48,19 +48,9 @@
 .Cover-image {
   width: 100%;
   height: auto;
-  min-height: 200px;
   object-fit: cover;
   pointer-events: none;
 }
-
-/* .Cover-image-decoration {
-  pointer-events: none;
-  background-color: brown;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1980/162;
-  clip-path: polygon(50% 90%, 100% 0, 100% 10%, 50% 100%, 0 10%, 0 0);
-} */
 
 .App-link {
   color: #61dafb;

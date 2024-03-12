@@ -91,7 +91,7 @@ export default function PoliciesPage() {
   return (
     <Page>
       <Box className='Policies-page-container' flex alignItems='center' justifyContent='center'>
-        <img src={CoverPhoto} className="Cover-image" alt="Cover"/>
+        <Box component="img" src={CoverPhoto} className="Cover-image" alt="Cover" sx={{minHeight: {xs: '300px', md: '200px'}}}/>
         <Grid container direction='column' spacing={0} className='Policies-content'>
           <Grid item p={0}>
             <SectionWithText
