@@ -1,7 +1,8 @@
 {
-  "name": "app",
+  "name": "pontus-apartments-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://pontusapartments.com/",
   "dependencies": {
     "@emailjs/browser": "^4.1.0",
     "@emotion/react": "^11.11.1",
@@ -48,6 +49,7 @@
     ]
   },
   "devDependencies": {
-    "react-router-dom": "^6.20.1"
+    "react-router-dom": "^6.20.1",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
